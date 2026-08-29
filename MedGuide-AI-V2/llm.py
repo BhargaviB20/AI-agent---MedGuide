@@ -12,10 +12,9 @@ PLACEHOLDER_KEYS = {"", "your_gemini_api_key", "your_key_here", "changeme"}
 
 # Tried in order if GEMINI_MODEL is unset or that model is no longer available.
 MODEL_CANDIDATES = [
-    "gemini-2.0-flash",
+    "gemini-flash-lite-latest",
     "gemini-flash-latest",
-    "gemini-2.0-flash-001",
-    "gemini-1.5-flash",
+    "gemini-2.5-flash-lite",
 ]
 
 
