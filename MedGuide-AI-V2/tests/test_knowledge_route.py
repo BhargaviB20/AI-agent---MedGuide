@@ -66,7 +66,9 @@ def test_knowledge_answer_quotes_the_matching_medquad_row():
 
     answer = state["final_response"]
     assert "autosomal dominant" in answer.lower()
-    assert "MedQuAD" in answer
+    # The patient-facing answer must not name the corpus or the machinery.
+    for word in ("MedQuAD", "corpus", "dataset", "retriev", "agent"):
+        assert word.lower() not in answer.lower()
 
 
 def test_symptom_report_still_runs_the_full_triage_pipeline():

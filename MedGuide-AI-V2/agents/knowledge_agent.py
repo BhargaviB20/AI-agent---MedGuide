@@ -25,27 +25,17 @@ def _sentences(text, limit):
 
 
 def _offline_answer(question, hits):
+    """The patient-facing text names no dataset or source: where the answer came
+    from is shown separately in the UI, not inside the answer."""
     best = hits[0]
     topic = best["focus_area"] or best["question"]
     body = _sentences(_clean(best["answer"]), MAX_OFFLINE_SENTENCES)
-
-    related = [
-        f"- {h['focus_area'] or h['question']}"
-        for h in hits[1:]
-        if (h["focus_area"] or h["question"]) != topic
-    ]
-    related_block = (
-        "\n\n**Related topics in the corpus**\n\n" + "\n".join(related)
-        if related else ""
-    )
 
     return (
         f"**About {topic}**\n\n{body}\n\n"
         f"**When you should see a doctor**\n\n"
         f"If this concerns you or someone you care for, discuss it with a doctor "
-        f"who can examine the person and read their reports.\n\n"
-        f"*Source: MedQuAD ({best['source'] or 'NIH'}), topic \"{topic}\".*"
-        f"{related_block}"
+        f"who can examine the person and read their reports."
     )
 
 
@@ -83,10 +73,10 @@ def knowledge_agent(state):
         state["ai_used"] = False
         state["final_response"] = (
             "**No matching information found**\n\n"
-            "This question does not match anything in the medical corpus this "
-            "assistant can read, so there is nothing reliable to report. Try "
-            "naming the condition directly, or describe your own symptoms "
-            "instead and I will give guidance on those."
+            "I do not have reliable medical information on this, so there is "
+            "nothing useful I can tell you about it. Try naming the condition "
+            "directly, or describe your own symptoms instead and I will give "
+            "guidance on those."
         )
         state["agent_log"].append(
             "Knowledge Answer Agent completed (no corpus match above threshold)."

@@ -125,7 +125,7 @@ available.
 | Source row in top 3 | 0.680 | **0.845** |
 | Correct disease topic first | 0.920 | 0.905 |
 | Routed as a knowledge question | – | 0.990 |
-| Reply overlaps the source answer (≥15% of its words) | – | 0.930 |
+| Reply overlaps the source answer (≥15% of its words) | – | 0.915 |
 | Mean latency, LLM excluded | – | 0.019 s |
 
 So for a question copied out of the dataset, the answer is drawn from that

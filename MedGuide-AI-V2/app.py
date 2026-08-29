@@ -355,9 +355,9 @@ if page == "💬 Chat":
             hits = result.get("medquad_hits") or []
             if hits:
                 label = (
-                    "Where this answer comes from (MedQuAD)"
+                    "Where this answer comes from"
                     if result.get("query_type") == "knowledge_question"
-                    else "Reference material used (MedQuAD)"
+                    else "Reference information used"
                 )
                 with st.expander(label):
                     for hit in hits:

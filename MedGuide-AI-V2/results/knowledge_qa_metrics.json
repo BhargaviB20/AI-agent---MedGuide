@@ -6,6 +6,6 @@
   "exact_source_question_at_1": 0.695,
   "exact_source_question_at_3": 0.845,
   "topic_at_1": 0.905,
-  "answer_grounded_in_source_row": 0.93,
+  "answer_grounded_in_source_row": 0.915,
   "mean_latency_seconds": 0.0188
 }
