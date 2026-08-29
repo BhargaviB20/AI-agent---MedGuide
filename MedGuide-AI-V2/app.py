@@ -254,23 +254,6 @@ professional. For emergency symptoms, seek immediate professional care.
 
 if page == "💬 Chat":
 
-    SAMPLE_CASES = {
-        "Mild cold": "Mild runny nose and slight sore throat since yesterday.",
-        "Persistent fever": "Fever around 101F for the past 4 days.",
-        "Breathing difficulty": "Severe difficulty breathing and tightness in chest.",
-        "Multiple symptoms": "I have cold, fever and headache for 7 days.",
-    }
-
-    if "symptom_text" not in st.session_state:
-        st.session_state.symptom_text = ""
-
-    st.markdown("### Quick test cases")
-
-    cols = st.columns(4)
-    for col, (label, text) in zip(cols, SAMPLE_CASES.items()):
-        if col.button(label, use_container_width=True):
-            st.session_state.symptom_text = text
-
     with st.form("patient_form", clear_on_submit=False):
         left, right = st.columns(2)
 
@@ -286,7 +269,6 @@ if page == "💬 Chat":
             symptoms = st.text_area(
                 "Medical question / symptoms",
                 height=170,
-                key="symptom_text",
                 placeholder="Example: I have cold, fever and headache for 7 days. What should I do?",
             )
 
@@ -352,27 +334,10 @@ if page == "💬 Chat":
                 )
                 st.markdown(result.get("final_response", "Unable to generate a response."))
 
-            hits = result.get("medquad_hits") or []
-            if hits:
-                label = (
-                    "Where this answer comes from"
-                    if result.get("query_type") == "knowledge_question"
-                    else "Reference information used"
-                )
-                with st.expander(label):
-                    for hit in hits:
-                        st.markdown(
-                            f"**{hit['question']}**  \n"
-                            f"_{hit['source'] or 'NIH'} • topic: "
-                            f"{hit['focus_area'] or '-'} • similarity "
-                            f"{hit['score']:.2f}_"
-                        )
-                        st.write(hit["answer"][:600] + "...")
-
-            with st.expander("Suggested care pathway"):
-                st.write(result.get("recommendation", ""))
-                st.write(result.get("hospital_navigation", ""))
-                st.caption(f"Response time: {result.get('response_time_seconds', '-')} seconds")
+                if result.get("query_type") != "knowledge_question":
+                    st.markdown("**Suggested care pathway**")
+                    st.write(result.get("recommendation", ""))
+                    st.write(result.get("hospital_navigation", ""))
 
             st.caption(
                 "AI-assisted health guidance. This does not replace professional medical advice."
