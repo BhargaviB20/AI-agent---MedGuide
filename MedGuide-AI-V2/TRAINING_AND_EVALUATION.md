@@ -109,11 +109,13 @@ sentence), not a human judgement, and is reported as such.
 A query that is a general medical question ("What causes Urinary Incontinence
 ?") is not a symptom report, so it skips triage and is answered from the
 matching corpus row instead (`agents/query_router.py` →
-`agents/knowledge_agent.py`). Ranking is helped by two corrections in
-`agents/medical_agent.py`: candidates whose question wording matches the asked
-intent are promoted within the same disease topic, and MedQuAD rows that
-contain only lists of external links are dropped when explanatory text is
-available.
+`agents/knowledge_agent.py`). Ranking is helped by three corrections in
+`agents/medical_agent.py`: a candidate whose question repeats ≥80% of the words
+of the asked question is treated as the same question and wins outright (TF-IDF
+alone ranked "How to prevent Kidney Dysplasia" above "How to prevent Kidney
+Disease"), candidates whose wording matches the asked intent are promoted
+within the same disease topic, and rows that contain only lists of external
+links are dropped when explanatory text is available.
 
 - Script: `python -m ml.eval_knowledge_qa`
 - 200 randomly sampled MedQuAD questions (seed 42) replayed through the full
@@ -121,17 +123,19 @@ available.
 
 | Metric | Plain TF-IDF | As deployed |
 | --- | --- | --- |
-| Source row ranked first | 0.385 | **0.695** |
-| Source row in top 3 | 0.680 | **0.845** |
-| Correct disease topic first | 0.920 | 0.905 |
+| Source row ranked first | 0.385 | **0.905** |
+| Source row in top 3 | 0.680 | **0.920** |
+| Correct disease topic first | 0.920 | **0.955** |
 | Routed as a knowledge question | – | 0.990 |
-| Reply overlaps the source answer (≥15% of its words) | – | 0.915 |
+| Reply overlaps the source answer (≥15% of its words) | – | 0.960 |
 | Mean latency, LLM excluded | – | 0.019 s |
 
 So for a question copied out of the dataset, the answer is drawn from that
-question's own MedQuAD row about 7 times in 10, and from the right disease
-topic 9 times in 10. When nothing relevant is retrieved the app says so rather
+question's own MedQuAD row about 9 times in 10, and from the right disease
+topic 19 times in 20. When nothing relevant is retrieved the app says so rather
 than producing generic text. Emergency wording still bypasses this route.
+The patient-facing answer never names the corpus or the source; the app shows
+the matched question, source and similarity separately in the UI.
 
 ## 7. Reproducing everything
 

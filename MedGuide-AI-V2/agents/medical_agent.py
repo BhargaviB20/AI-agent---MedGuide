@@ -1,3 +1,5 @@
+import re
+
 from ml.predictors import predict_intent
 from rag.meddialog_retriever import retrieve_meddialog
 from rag.retriever import retrieve_medquad
@@ -22,6 +24,9 @@ INTENT_CUES = {
 # passages on the same topic as the best hit, so it re-orders within a topic
 # instead of pulling in a different disease that matches the wording.
 CUE_BONUS = 0.5
+
+# Word overlap at which a candidate counts as the same question being asked.
+NEAR_EXACT_OVERLAP = 0.8
 
 # Some MedQuAD rows are only lists of external links, which tell a patient
 # nothing, so they are dropped whenever explanatory text is also available.
@@ -55,20 +60,52 @@ def asked_intent(text, predicted, confidence):
     return predicted if confidence >= 0.5 else None
 
 
+def normalise_question(text):
+    return re.sub(r"[^a-z0-9 ]", " ", (text or "").lower()).split()
+
+
+def question_overlap(query_words, candidate_words):
+    """How much of the asked question the candidate question repeats. A question
+    copied out of the corpus scores 1.0 and must win regardless of TF-IDF,
+    which otherwise ranks a similarly worded question about a different
+    disease higher."""
+    query, candidate = set(query_words), set(candidate_words)
+    if not query or not candidate:
+        return 0.0
+    return len(query & candidate) / len(query | candidate)
+
+
 def is_boilerplate(hit):
     answer = (hit["answer"] or "").lower()[:400]
     return any(marker in answer for marker in BOILERPLATE_MARKERS)
 
 
-def rerank_by_intent(hits, intent):
+def rerank_by_intent(hits, intent, asked=None):
     if not hits:
         return hits
 
     useful = [hit for hit in hits if not is_boilerplate(hit)]
     ranked = useful or hits
 
+    asked_words = normalise_question(asked)
+    exact = [
+        hit for hit in ranked
+        if question_overlap(asked_words, normalise_question(hit["question"]))
+        >= NEAR_EXACT_OVERLAP
+    ]
+    if exact:
+        rest = [hit for hit in ranked if hit not in exact]
+        return _sort(exact, intent) + _sort(rest, intent)
+
+    return _sort(ranked, intent)
+
+
+def _sort(hits, intent):
+    if not hits:
+        return hits
+
     cues = INTENT_CUES.get(intent, ()) if intent else ()
-    primary_topic = (ranked[0]["focus_area"] or "").lower()
+    primary_topic = (hits[0]["focus_area"] or "").lower()
 
     def sort_key(hit):
         question = (hit["question"] or "").lower()
@@ -80,7 +117,7 @@ def rerank_by_intent(hits, intent):
         )
         return hit["score"] + bonus
 
-    return sorted(ranked, key=sort_key, reverse=True)
+    return sorted(hits, key=sort_key, reverse=True)
 
 
 def medical_agent(state):
@@ -102,7 +139,7 @@ def medical_agent(state):
 
     try:
         hits = rerank_by_intent(
-            retrieve_medquad(query, top_k=30), effective_intent
+            retrieve_medquad(query, top_k=30), effective_intent, symptoms
         )[:3]
         state["medquad_hits"] = hits
         for item in hits:

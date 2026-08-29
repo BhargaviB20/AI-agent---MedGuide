@@ -4,6 +4,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from agents.medical_agent import rerank_by_intent  # noqa: E402
+from agents.medical_agent import question_overlap  # noqa: E402
 from agents.query_router import is_knowledge_question  # noqa: E402
 from workflow import run_medguide  # noqa: E402
 
@@ -82,6 +83,26 @@ def test_symptom_report_still_runs_the_full_triage_pipeline():
 def test_off_topic_question_says_so_instead_of_inventing_an_answer():
     state = ask("how do i become a pilot ?")
     assert "No matching information" in state["final_response"]
+
+
+def test_a_question_copied_from_the_dataset_finds_its_own_row():
+    for question, expected in (
+        ("How to prevent Kidney Disease ?", "how to prevent kidney disease ?"),
+        (
+            "What are the treatments for Hearing Loss ?",
+            "what are the treatments for hearing loss ?",
+        ),
+    ):
+        state = ask(question)
+        assert state["medquad_hits"][0]["question"].lower() == expected
+
+
+def test_question_overlap_separates_the_same_question_from_a_similar_one():
+    asked = "how to prevent kidney disease".split()
+    same = "how to prevent kidney disease".split()
+    other = "how to prevent kidney dysplasia".split()
+    assert question_overlap(asked, same) == 1.0
+    assert question_overlap(asked, other) < 0.8
 
 
 def test_link_only_passages_are_dropped_when_real_text_exists():
