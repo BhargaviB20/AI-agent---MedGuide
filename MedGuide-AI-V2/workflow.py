@@ -3,8 +3,10 @@ import time
 from agents.emergency_check import detect_emergency
 from agents.final_agent import final_agent
 from agents.hospital_agent import hospital_agent
+from agents.knowledge_agent import knowledge_agent
 from agents.medical_agent import medical_agent
 from agents.profile_agent import profile_agent
+from agents.query_router import is_knowledge_question
 from agents.recommendation_agent import recommendation_agent
 from agents.risk_agent import risk_agent
 from agents.symptom_agent import symptom_agent
@@ -19,6 +21,15 @@ AGENT_STEPS = [
     ("Recommendation Agent", recommendation_agent),
     ("Hospital Navigation Agent", hospital_agent),
     ("Final Response Agent", final_agent),
+]
+
+# General medical questions are answered from the corpus instead of being
+# triaged, so "what causes diabetes" is not treated as a symptom report.
+KNOWLEDGE_STEPS = [
+    ("Patient Profile Agent", profile_agent),
+    ("Symptom Analysis Agent", symptom_agent),
+    ("Medical Knowledge Agent", medical_agent),
+    ("Knowledge Answer Agent", knowledge_agent),
 ]
 
 
@@ -62,8 +73,23 @@ def run_medguide(patient, on_step=None):
         state["response_time_seconds"] = round(time.perf_counter() - start_time, 2)
         return state
 
-    total = len(AGENT_STEPS)
-    for i, (step_name, agent) in enumerate(AGENT_STEPS, start=1):
+    knowledge_question = is_knowledge_question(patient.get("symptoms", ""))
+    steps = KNOWLEDGE_STEPS if knowledge_question else AGENT_STEPS
+
+    if knowledge_question:
+        state["query_type"] = "knowledge_question"
+        state["risk_level"] = "INFO"
+        state["risk"] = "Risk level: INFO. General question, not a symptom report."
+        state["recommendation"] = (
+            "This is general information. Discuss anything that applies to you "
+            "with a doctor."
+        )
+        state["hospital_navigation"] = "Not applicable for a general question."
+    else:
+        state["query_type"] = "symptom_report"
+
+    total = len(steps)
+    for i, (step_name, agent) in enumerate(steps, start=1):
         if on_step:
             on_step(step_name, i, total)
         state = agent(state)

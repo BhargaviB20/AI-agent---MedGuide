@@ -119,6 +119,7 @@ font-size: 12px; font-weight: 800;
 .badge-moderate { background: #493817; color: #ffd166; }
 .badge-high { background: #492717; color: #ffae72; }
 .badge-emergency { background: #4a1b24; color: #ff6b7a; }
+.badge-info { background: #16334a; color: #7cc4ff; }
 </style>
 """,
     unsafe_allow_html=True,
@@ -134,6 +135,8 @@ def get_risk_badge(risk_text):
 
     if "EMERGENCY" in text:
         return "EMERGENCY", "badge-emergency"
+    if "INFO" in text:
+        return "INFO", "badge-info"
     if "HIGH" in text:
         return "HIGH", "badge-high"
     if "MODERATE" in text:
@@ -349,6 +352,23 @@ if page == "💬 Chat":
                 )
                 st.markdown(result.get("final_response", "Unable to generate a response."))
 
+            hits = result.get("medquad_hits") or []
+            if hits:
+                label = (
+                    "Where this answer comes from (MedQuAD)"
+                    if result.get("query_type") == "knowledge_question"
+                    else "Reference material used (MedQuAD)"
+                )
+                with st.expander(label):
+                    for hit in hits:
+                        st.markdown(
+                            f"**{hit['question']}**  \n"
+                            f"_{hit['source'] or 'NIH'} • topic: "
+                            f"{hit['focus_area'] or '-'} • similarity "
+                            f"{hit['score']:.2f}_"
+                        )
+                        st.write(hit["answer"][:600] + "...")
+
             with st.expander("Suggested care pathway"):
                 st.write(result.get("recommendation", ""))
                 st.write(result.get("hospital_navigation", ""))
@@ -414,7 +434,8 @@ elif page == "📊 Evaluation":
     st.markdown("### Measured results")
     st.caption(
         "Produced by the scripts in `ml/`: train_triage.py, train_intent.py, "
-        "eval_retrieval.py and eval_pipeline.py. Re-run them to refresh these numbers."
+        "eval_retrieval.py, eval_pipeline.py and eval_knowledge_qa.py. "
+        "Re-run them to refresh these numbers."
     )
 
     RESULTS_DIR = Path(__file__).resolve().parent / "results"
@@ -423,6 +444,7 @@ elif page == "📊 Evaluation":
         "Question-intent classifier": "intent_metrics.json",
         "MedQuAD retrieval": "retrieval_metrics.json",
         "End-to-end pipeline": "pipeline_metrics.json",
+        "MedQuAD question answering": "knowledge_qa_metrics.json",
     }
 
     found_any = False

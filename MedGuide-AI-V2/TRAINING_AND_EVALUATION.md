@@ -104,7 +104,36 @@ single API call.
 Groundedness here is a coarse lexical proxy (≥2 shared content words per
 sentence), not a human judgement, and is reported as such.
 
-## 6. Reproducing everything
+## 6. Answering questions taken straight from MedQuAD
+
+A query that is a general medical question ("What causes Urinary Incontinence
+?") is not a symptom report, so it skips triage and is answered from the
+matching corpus row instead (`agents/query_router.py` →
+`agents/knowledge_agent.py`). Ranking is helped by two corrections in
+`agents/medical_agent.py`: candidates whose question wording matches the asked
+intent are promoted within the same disease topic, and MedQuAD rows that
+contain only lists of external links are dropped when explanatory text is
+available.
+
+- Script: `python -m ml.eval_knowledge_qa`
+- 200 randomly sampled MedQuAD questions (seed 42) replayed through the full
+  pipeline, Gemini disabled so the reply is the corpus extract itself.
+
+| Metric | Plain TF-IDF | As deployed |
+| --- | --- | --- |
+| Source row ranked first | 0.385 | **0.695** |
+| Source row in top 3 | 0.680 | **0.845** |
+| Correct disease topic first | 0.920 | 0.905 |
+| Routed as a knowledge question | – | 0.990 |
+| Reply overlaps the source answer (≥15% of its words) | – | 0.930 |
+| Mean latency, LLM excluded | – | 0.019 s |
+
+So for a question copied out of the dataset, the answer is drawn from that
+question's own MedQuAD row about 7 times in 10, and from the right disease
+topic 9 times in 10. When nothing relevant is retrieved the app says so rather
+than producing generic text. Emergency wording still bypasses this route.
+
+## 7. Reproducing everything
 
 ```bash
 pip install -r requirements.txt
@@ -114,6 +143,7 @@ python -m ml.train_intent        # -> models/intent_classifier.joblib, results/i
 python -m ml.train_triage        # -> models/triage_classifier.joblib, results/triage_metrics.json
 python -m ml.eval_retrieval      # -> results/retrieval_metrics.json
 python -m ml.eval_pipeline       # -> results/pipeline_metrics.json
+python -m ml.eval_knowledge_qa   # -> results/knowledge_qa_metrics.json
 python -m pytest tests -q
 ```
 
