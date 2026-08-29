@@ -13,7 +13,13 @@ MIN_SCORE = 0.15
 MAX_OFFLINE_WORDS = 150
 
 # Website furniture that survives into some corpus answers.
-NOISE_MARKERS = ("watch the video", "read more about", "click here", "this page")
+NOISE_MARKERS = (
+    "watch the video",
+    "enlarge the video",
+    "read more about",
+    "click here",
+    "this page",
+)
 
 
 def _clean(text):
