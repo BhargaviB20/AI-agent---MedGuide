@@ -10,7 +10,10 @@ import re
 from llm import generate
 
 MIN_SCORE = 0.15
-MAX_OFFLINE_SENTENCES = 8
+MAX_OFFLINE_WORDS = 150
+
+# Website furniture that survives into some corpus answers.
+NOISE_MARKERS = ("watch the video", "read more about", "click here", "this page")
 
 
 def _clean(text):
@@ -19,9 +22,29 @@ def _clean(text):
     return text.replace(" - ", "\n- ")
 
 
-def _sentences(text, limit):
-    parts = re.split(r"(?<=[.!?])\s+", text)
-    return " ".join(parts[:limit]).strip()
+def _readable(text, max_words):
+    """MedQuAD answers repeat themselves and run for pages, so repeated
+    sentences are dropped and the rest is cut to something a person will read.
+    A sentence that merely restates an earlier one, in either direction, counts
+    as a repeat: the corpus often echoes its own bullet items in the next
+    sentence."""
+    kept, keys, words = [], [], 0
+
+    for sentence in re.split(r"(?<=[.!?])\s+|\n", text):
+        sentence = sentence.strip(" -:")
+        key = re.sub(r"[^a-z0-9 ]", "", sentence.lower())
+        if len(key) < 15 or any(marker in key for marker in NOISE_MARKERS):
+            continue
+        if any(key in old or old in key for old in keys):
+            continue
+
+        keys.append(key)
+        kept.append(sentence.rstrip(".") + ".")
+        words += len(sentence.split())
+        if words >= max_words:
+            break
+
+    return " ".join(kept)
 
 
 def _offline_answer(question, hits):
@@ -29,7 +52,7 @@ def _offline_answer(question, hits):
     from is shown separately in the UI, not inside the answer."""
     best = hits[0]
     topic = best["focus_area"] or best["question"]
-    body = _sentences(_clean(best["answer"]), MAX_OFFLINE_SENTENCES)
+    body = _readable(_clean(best["answer"]), MAX_OFFLINE_WORDS)
 
     return (
         f"**About {topic}**\n\n{body}\n\n"
