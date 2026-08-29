@@ -1,0 +1,4 @@
+streamlit>=1.40
+scikit-learn>=1.5
+python-dotenv>=1.0
+google-genai>=1.0

@@ -1,0 +1,3 @@
+Medication decisions should account for allergies, current medicines, age, existing
+conditions, pregnancy status when relevant, and other clinical factors. An AI system
+should not independently prescribe, stop, or change medication.
