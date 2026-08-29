@@ -1,0 +1,1281 @@
+seed_id,text,label
+0,crushing chest pain spreading to my left arm and jaw,EMERGENCY
+0,i have crushing chest pain spreading to my left arm and jaw,EMERGENCY
+0,"doctor, crushing chest pain spreading to my left arm and jaw",EMERGENCY
+0,crushing chest pain spreading to my left arm and jaw. what should i do,EMERGENCY
+0,crushing chest pain spreading to my left arm and jaw. please advise,EMERGENCY
+0,"hi, crushing chest pain spreading to my left arm and jaw and i am worried",EMERGENCY
+0,hello doctor crushing chest pain spreading to my left arm and jaw,EMERGENCY
+0,i am experiencing crushing chest pain spreading to my left arm and jaw,EMERGENCY
+1,"chest pain and sweating, feels like pressure on my chest",EMERGENCY
+1,"i have chest pain and sweating, feels like pressure on my chest",EMERGENCY
+1,"doctor, chest pain and sweating, feels like pressure on my chest",EMERGENCY
+1,"chest pain and sweating, feels like pressure on my chest. what should i do",EMERGENCY
+1,"chest pain and sweating, feels like pressure on my chest. please advise",EMERGENCY
+1,"hi, chest pain and sweating, feels like pressure on my chest and i am worried",EMERGENCY
+1,"hello doctor chest pain and sweating, feels like pressure on my chest",EMERGENCY
+1,"i am experiencing chest pain and sweating, feels like pressure on my chest",EMERGENCY
+2,i cannot breathe properly and my lips look blue,EMERGENCY
+2,i have i cannot breathe properly and my lips look blue,EMERGENCY
+2,"doctor, i cannot breathe properly and my lips look blue",EMERGENCY
+2,i cannot breathe properly and my lips look blue. what should i do,EMERGENCY
+2,i cannot breathe properly and my lips look blue. please advise,EMERGENCY
+2,"hi, i cannot breathe properly and my lips look blue and i am worried",EMERGENCY
+2,hello doctor i cannot breathe properly and my lips look blue,EMERGENCY
+2,i am experiencing i cannot breathe properly and my lips look blue,EMERGENCY
+3,"severe difficulty breathing, i can only speak a few words",EMERGENCY
+3,"i have severe difficulty breathing, i can only speak a few words",EMERGENCY
+3,"doctor, severe difficulty breathing, i can only speak a few words",EMERGENCY
+3,"severe difficulty breathing, i can only speak a few words. what should i do",EMERGENCY
+3,"severe difficulty breathing, i can only speak a few words. please advise",EMERGENCY
+3,"hi, severe difficulty breathing, i can only speak a few words and i am worried",EMERGENCY
+3,"hello doctor severe difficulty breathing, i can only speak a few words",EMERGENCY
+3,"i am experiencing severe difficulty breathing, i can only speak a few words",EMERGENCY
+4,coughing up blood since this morning,EMERGENCY
+4,i have coughing up blood since this morning,EMERGENCY
+4,"doctor, coughing up blood since this morning",EMERGENCY
+4,coughing up blood since this morning. what should i do,EMERGENCY
+4,coughing up blood since this morning. please advise,EMERGENCY
+4,"hi, coughing up blood since this morning and i am worried",EMERGENCY
+4,hello doctor coughing up blood since this morning,EMERGENCY
+4,i am experiencing coughing up blood since this morning,EMERGENCY
+5,vomiting blood and feeling faint,EMERGENCY
+5,i have vomiting blood and feeling faint,EMERGENCY
+5,"doctor, vomiting blood and feeling faint",EMERGENCY
+5,vomiting blood and feeling faint. what should i do,EMERGENCY
+5,vomiting blood and feeling faint. please advise,EMERGENCY
+5,"hi, vomiting blood and feeling faint and i am worried",EMERGENCY
+5,hello doctor vomiting blood and feeling faint,EMERGENCY
+5,i am experiencing vomiting blood and feeling faint,EMERGENCY
+6,sudden weakness on one side of my body and slurred speech,EMERGENCY
+6,i have sudden weakness on one side of my body and slurred speech,EMERGENCY
+6,"doctor, sudden weakness on one side of my body and slurred speech",EMERGENCY
+6,sudden weakness on one side of my body and slurred speech. what should i do,EMERGENCY
+6,sudden weakness on one side of my body and slurred speech. please advise,EMERGENCY
+6,"hi, sudden weakness on one side of my body and slurred speech and i am worried",EMERGENCY
+6,hello doctor sudden weakness on one side of my body and slurred speech,EMERGENCY
+6,i am experiencing sudden weakness on one side of my body and slurred speech,EMERGENCY
+7,my face has drooped on one side and my arm is numb,EMERGENCY
+7,i have my face has drooped on one side and my arm is numb,EMERGENCY
+7,"doctor, my face has drooped on one side and my arm is numb",EMERGENCY
+7,my face has drooped on one side and my arm is numb. what should i do,EMERGENCY
+7,my face has drooped on one side and my arm is numb. please advise,EMERGENCY
+7,"hi, my face has drooped on one side and my arm is numb and i am worried",EMERGENCY
+7,hello doctor my face has drooped on one side and my arm is numb,EMERGENCY
+7,i am experiencing my face has drooped on one side and my arm is numb,EMERGENCY
+8,i had a seizure a few minutes ago and i am confused,EMERGENCY
+8,i have i had a seizure a few minutes ago and i am confused,EMERGENCY
+8,"doctor, i had a seizure a few minutes ago and i am confused",EMERGENCY
+8,i had a seizure a few minutes ago and i am confused. what should i do,EMERGENCY
+8,i had a seizure a few minutes ago and i am confused. please advise,EMERGENCY
+8,"hi, i had a seizure a few minutes ago and i am confused and i am worried",EMERGENCY
+8,hello doctor i had a seizure a few minutes ago and i am confused,EMERGENCY
+8,i am experiencing i had a seizure a few minutes ago and i am confused,EMERGENCY
+9,my child is unresponsive and floppy,EMERGENCY
+9,i have my child is unresponsive and floppy,EMERGENCY
+9,"doctor, my child is unresponsive and floppy",EMERGENCY
+9,my child is unresponsive and floppy. what should i do,EMERGENCY
+9,my child is unresponsive and floppy. please advise,EMERGENCY
+9,"hi, my child is unresponsive and floppy and i am worried",EMERGENCY
+9,hello doctor my child is unresponsive and floppy,EMERGENCY
+9,i am experiencing my child is unresponsive and floppy,EMERGENCY
+10,heavy bleeding from a deep cut that will not stop,EMERGENCY
+10,i have heavy bleeding from a deep cut that will not stop,EMERGENCY
+10,"doctor, heavy bleeding from a deep cut that will not stop",EMERGENCY
+10,heavy bleeding from a deep cut that will not stop. what should i do,EMERGENCY
+10,heavy bleeding from a deep cut that will not stop. please advise,EMERGENCY
+10,"hi, heavy bleeding from a deep cut that will not stop and i am worried",EMERGENCY
+10,hello doctor heavy bleeding from a deep cut that will not stop,EMERGENCY
+10,i am experiencing heavy bleeding from a deep cut that will not stop,EMERGENCY
+11,"worst headache of my life, started suddenly like a thunderclap",EMERGENCY
+11,"i have worst headache of my life, started suddenly like a thunderclap",EMERGENCY
+11,"doctor, worst headache of my life, started suddenly like a thunderclap",EMERGENCY
+11,"worst headache of my life, started suddenly like a thunderclap. what should i do",EMERGENCY
+11,"worst headache of my life, started suddenly like a thunderclap. please advise",EMERGENCY
+11,"hi, worst headache of my life, started suddenly like a thunderclap and i am worried",EMERGENCY
+11,"hello doctor worst headache of my life, started suddenly like a thunderclap",EMERGENCY
+11,"i am experiencing worst headache of my life, started suddenly like a thunderclap",EMERGENCY
+12,i took an overdose of tablets,EMERGENCY
+12,i have i took an overdose of tablets,EMERGENCY
+12,"doctor, i took an overdose of tablets",EMERGENCY
+12,i took an overdose of tablets. what should i do,EMERGENCY
+12,i took an overdose of tablets. please advise,EMERGENCY
+12,"hi, i took an overdose of tablets and i am worried",EMERGENCY
+12,hello doctor i took an overdose of tablets,EMERGENCY
+12,i am experiencing i took an overdose of tablets,EMERGENCY
+13,i am having thoughts of ending my life,EMERGENCY
+13,i have i am having thoughts of ending my life,EMERGENCY
+13,"doctor, i am having thoughts of ending my life",EMERGENCY
+13,i am having thoughts of ending my life. what should i do,EMERGENCY
+13,i am having thoughts of ending my life. please advise,EMERGENCY
+13,"hi, i am having thoughts of ending my life and i am worried",EMERGENCY
+13,hello doctor i am having thoughts of ending my life,EMERGENCY
+13,i am experiencing i am having thoughts of ending my life,EMERGENCY
+14,severe abdominal pain with a rigid hard stomach,EMERGENCY
+14,i have severe abdominal pain with a rigid hard stomach,EMERGENCY
+14,"doctor, severe abdominal pain with a rigid hard stomach",EMERGENCY
+14,severe abdominal pain with a rigid hard stomach. what should i do,EMERGENCY
+14,severe abdominal pain with a rigid hard stomach. please advise,EMERGENCY
+14,"hi, severe abdominal pain with a rigid hard stomach and i am worried",EMERGENCY
+14,hello doctor severe abdominal pain with a rigid hard stomach,EMERGENCY
+14,i am experiencing severe abdominal pain with a rigid hard stomach,EMERGENCY
+15,high fever with a stiff neck and i cannot tolerate light,EMERGENCY
+15,i have high fever with a stiff neck and i cannot tolerate light,EMERGENCY
+15,"doctor, high fever with a stiff neck and i cannot tolerate light",EMERGENCY
+15,high fever with a stiff neck and i cannot tolerate light. what should i do,EMERGENCY
+15,high fever with a stiff neck and i cannot tolerate light. please advise,EMERGENCY
+15,"hi, high fever with a stiff neck and i cannot tolerate light and i am worried",EMERGENCY
+15,hello doctor high fever with a stiff neck and i cannot tolerate light,EMERGENCY
+15,i am experiencing high fever with a stiff neck and i cannot tolerate light,EMERGENCY
+16,swollen tongue and throat closing after eating peanuts,EMERGENCY
+16,i have swollen tongue and throat closing after eating peanuts,EMERGENCY
+16,"doctor, swollen tongue and throat closing after eating peanuts",EMERGENCY
+16,swollen tongue and throat closing after eating peanuts. what should i do,EMERGENCY
+16,swollen tongue and throat closing after eating peanuts. please advise,EMERGENCY
+16,"hi, swollen tongue and throat closing after eating peanuts and i am worried",EMERGENCY
+16,hello doctor swollen tongue and throat closing after eating peanuts,EMERGENCY
+16,i am experiencing swollen tongue and throat closing after eating peanuts,EMERGENCY
+17,whole body rash with swelling of the face and trouble breathing,EMERGENCY
+17,i have whole body rash with swelling of the face and trouble breathing,EMERGENCY
+17,"doctor, whole body rash with swelling of the face and trouble breathing",EMERGENCY
+17,whole body rash with swelling of the face and trouble breathing. what should i do,EMERGENCY
+17,whole body rash with swelling of the face and trouble breathing. please advise,EMERGENCY
+17,"hi, whole body rash with swelling of the face and trouble breathing and i am worried",EMERGENCY
+17,hello doctor whole body rash with swelling of the face and trouble breathing,EMERGENCY
+17,i am experiencing whole body rash with swelling of the face and trouble breathing,EMERGENCY
+18,"fainted and hit my head, vomiting since then",EMERGENCY
+18,"i have fainted and hit my head, vomiting since then",EMERGENCY
+18,"doctor, fainted and hit my head, vomiting since then",EMERGENCY
+18,"fainted and hit my head, vomiting since then. what should i do",EMERGENCY
+18,"fainted and hit my head, vomiting since then. please advise",EMERGENCY
+18,"hi, fainted and hit my head, vomiting since then and i am worried",EMERGENCY
+18,"hello doctor fainted and hit my head, vomiting since then",EMERGENCY
+18,"i am experiencing fainted and hit my head, vomiting since then",EMERGENCY
+19,i am pregnant with heavy bleeding and severe belly pain,EMERGENCY
+19,i have i am pregnant with heavy bleeding and severe belly pain,EMERGENCY
+19,"doctor, i am pregnant with heavy bleeding and severe belly pain",EMERGENCY
+19,i am pregnant with heavy bleeding and severe belly pain. what should i do,EMERGENCY
+19,i am pregnant with heavy bleeding and severe belly pain. please advise,EMERGENCY
+19,"hi, i am pregnant with heavy bleeding and severe belly pain and i am worried",EMERGENCY
+19,hello doctor i am pregnant with heavy bleeding and severe belly pain,EMERGENCY
+19,i am experiencing i am pregnant with heavy bleeding and severe belly pain,EMERGENCY
+20,burns over my arm with blistering skin from boiling water,EMERGENCY
+20,i have burns over my arm with blistering skin from boiling water,EMERGENCY
+20,"doctor, burns over my arm with blistering skin from boiling water",EMERGENCY
+20,burns over my arm with blistering skin from boiling water. what should i do,EMERGENCY
+20,burns over my arm with blistering skin from boiling water. please advise,EMERGENCY
+20,"hi, burns over my arm with blistering skin from boiling water and i am worried",EMERGENCY
+20,hello doctor burns over my arm with blistering skin from boiling water,EMERGENCY
+20,i am experiencing burns over my arm with blistering skin from boiling water,EMERGENCY
+21,cannot pass urine at all since yesterday and severe lower belly pain,EMERGENCY
+21,i have cannot pass urine at all since yesterday and severe lower belly pain,EMERGENCY
+21,"doctor, cannot pass urine at all since yesterday and severe lower belly pain",EMERGENCY
+21,cannot pass urine at all since yesterday and severe lower belly pain. what should i do,EMERGENCY
+21,cannot pass urine at all since yesterday and severe lower belly pain. please advise,EMERGENCY
+21,"hi, cannot pass urine at all since yesterday and severe lower belly pain and i am worried",EMERGENCY
+21,hello doctor cannot pass urine at all since yesterday and severe lower belly pain,EMERGENCY
+21,i am experiencing cannot pass urine at all since yesterday and severe lower belly pain,EMERGENCY
+22,sudden loss of vision in one eye,EMERGENCY
+22,i have sudden loss of vision in one eye,EMERGENCY
+22,"doctor, sudden loss of vision in one eye",EMERGENCY
+22,sudden loss of vision in one eye. what should i do,EMERGENCY
+22,sudden loss of vision in one eye. please advise,EMERGENCY
+22,"hi, sudden loss of vision in one eye and i am worried",EMERGENCY
+22,hello doctor sudden loss of vision in one eye,EMERGENCY
+22,i am experiencing sudden loss of vision in one eye,EMERGENCY
+23,chest tightness with cold sweat and vomiting,EMERGENCY
+23,i have chest tightness with cold sweat and vomiting,EMERGENCY
+23,"doctor, chest tightness with cold sweat and vomiting",EMERGENCY
+23,chest tightness with cold sweat and vomiting. what should i do,EMERGENCY
+23,chest tightness with cold sweat and vomiting. please advise,EMERGENCY
+23,"hi, chest tightness with cold sweat and vomiting and i am worried",EMERGENCY
+23,hello doctor chest tightness with cold sweat and vomiting,EMERGENCY
+23,i am experiencing chest tightness with cold sweat and vomiting,EMERGENCY
+24,my newborn baby is not breathing normally and is grunting,EMERGENCY
+24,i have my newborn baby is not breathing normally and is grunting,EMERGENCY
+24,"doctor, my newborn baby is not breathing normally and is grunting",EMERGENCY
+24,my newborn baby is not breathing normally and is grunting. what should i do,EMERGENCY
+24,my newborn baby is not breathing normally and is grunting. please advise,EMERGENCY
+24,"hi, my newborn baby is not breathing normally and is grunting and i am worried",EMERGENCY
+24,hello doctor my newborn baby is not breathing normally and is grunting,EMERGENCY
+24,i am experiencing my newborn baby is not breathing normally and is grunting,EMERGENCY
+25,snake bite on my leg an hour ago,EMERGENCY
+25,i have snake bite on my leg an hour ago,EMERGENCY
+25,"doctor, snake bite on my leg an hour ago",EMERGENCY
+25,snake bite on my leg an hour ago. what should i do,EMERGENCY
+25,snake bite on my leg an hour ago. please advise,EMERGENCY
+25,"hi, snake bite on my leg an hour ago and i am worried",EMERGENCY
+25,hello doctor snake bite on my leg an hour ago,EMERGENCY
+25,i am experiencing snake bite on my leg an hour ago,EMERGENCY
+26,severe electric shock and my heart is racing,EMERGENCY
+26,i have severe electric shock and my heart is racing,EMERGENCY
+26,"doctor, severe electric shock and my heart is racing",EMERGENCY
+26,severe electric shock and my heart is racing. what should i do,EMERGENCY
+26,severe electric shock and my heart is racing. please advise,EMERGENCY
+26,"hi, severe electric shock and my heart is racing and i am worried",EMERGENCY
+26,hello doctor severe electric shock and my heart is racing,EMERGENCY
+26,i am experiencing severe electric shock and my heart is racing,EMERGENCY
+27,"confused, drowsy and cannot be woken properly",EMERGENCY
+27,"i have confused, drowsy and cannot be woken properly",EMERGENCY
+27,"doctor, confused, drowsy and cannot be woken properly",EMERGENCY
+27,"confused, drowsy and cannot be woken properly. what should i do",EMERGENCY
+27,"confused, drowsy and cannot be woken properly. please advise",EMERGENCY
+27,"hi, confused, drowsy and cannot be woken properly and i am worried",EMERGENCY
+27,"hello doctor confused, drowsy and cannot be woken properly",EMERGENCY
+27,"i am experiencing confused, drowsy and cannot be woken properly",EMERGENCY
+28,severe allergic reaction with hives all over and wheezing,EMERGENCY
+28,i have severe allergic reaction with hives all over and wheezing,EMERGENCY
+28,"doctor, severe allergic reaction with hives all over and wheezing",EMERGENCY
+28,severe allergic reaction with hives all over and wheezing. what should i do,EMERGENCY
+28,severe allergic reaction with hives all over and wheezing. please advise,EMERGENCY
+28,"hi, severe allergic reaction with hives all over and wheezing and i am worried",EMERGENCY
+28,hello doctor severe allergic reaction with hives all over and wheezing,EMERGENCY
+28,i am experiencing severe allergic reaction with hives all over and wheezing,EMERGENCY
+29,chest pain that started while resting and is not going away,EMERGENCY
+29,i have chest pain that started while resting and is not going away,EMERGENCY
+29,"doctor, chest pain that started while resting and is not going away",EMERGENCY
+29,chest pain that started while resting and is not going away. what should i do,EMERGENCY
+29,chest pain that started while resting and is not going away. please advise,EMERGENCY
+29,"hi, chest pain that started while resting and is not going away and i am worried",EMERGENCY
+29,hello doctor chest pain that started while resting and is not going away,EMERGENCY
+29,i am experiencing chest pain that started while resting and is not going away,EMERGENCY
+30,i am short of breath at rest and cannot lie flat,EMERGENCY
+30,i have i am short of breath at rest and cannot lie flat,EMERGENCY
+30,"doctor, i am short of breath at rest and cannot lie flat",EMERGENCY
+30,i am short of breath at rest and cannot lie flat. what should i do,EMERGENCY
+30,i am short of breath at rest and cannot lie flat. please advise,EMERGENCY
+30,"hi, i am short of breath at rest and cannot lie flat and i am worried",EMERGENCY
+30,hello doctor i am short of breath at rest and cannot lie flat,EMERGENCY
+30,i am experiencing i am short of breath at rest and cannot lie flat,EMERGENCY
+31,large amount of blood in my stool just now,EMERGENCY
+31,i have large amount of blood in my stool just now,EMERGENCY
+31,"doctor, large amount of blood in my stool just now",EMERGENCY
+31,large amount of blood in my stool just now. what should i do,EMERGENCY
+31,large amount of blood in my stool just now. please advise,EMERGENCY
+31,"hi, large amount of blood in my stool just now and i am worried",EMERGENCY
+31,hello doctor large amount of blood in my stool just now,EMERGENCY
+31,i am experiencing large amount of blood in my stool just now,EMERGENCY
+32,my child swallowed a button battery,EMERGENCY
+32,i have my child swallowed a button battery,EMERGENCY
+32,"doctor, my child swallowed a button battery",EMERGENCY
+32,my child swallowed a button battery. what should i do,EMERGENCY
+32,my child swallowed a button battery. please advise,EMERGENCY
+32,"hi, my child swallowed a button battery and i am worried",EMERGENCY
+32,hello doctor my child swallowed a button battery,EMERGENCY
+32,i am experiencing my child swallowed a button battery,EMERGENCY
+33,i drank a cleaning liquid by mistake,EMERGENCY
+33,i have i drank a cleaning liquid by mistake,EMERGENCY
+33,"doctor, i drank a cleaning liquid by mistake",EMERGENCY
+33,i drank a cleaning liquid by mistake. what should i do,EMERGENCY
+33,i drank a cleaning liquid by mistake. please advise,EMERGENCY
+33,"hi, i drank a cleaning liquid by mistake and i am worried",EMERGENCY
+33,hello doctor i drank a cleaning liquid by mistake,EMERGENCY
+33,i am experiencing i drank a cleaning liquid by mistake,EMERGENCY
+34,severe head injury after a road accident,EMERGENCY
+34,i have severe head injury after a road accident,EMERGENCY
+34,"doctor, severe head injury after a road accident",EMERGENCY
+34,severe head injury after a road accident. what should i do,EMERGENCY
+34,severe head injury after a road accident. please advise,EMERGENCY
+34,"hi, severe head injury after a road accident and i am worried",EMERGENCY
+34,hello doctor severe head injury after a road accident,EMERGENCY
+34,i am experiencing severe head injury after a road accident,EMERGENCY
+35,my arm is broken and the bone is visible,EMERGENCY
+35,i have my arm is broken and the bone is visible,EMERGENCY
+35,"doctor, my arm is broken and the bone is visible",EMERGENCY
+35,my arm is broken and the bone is visible. what should i do,EMERGENCY
+35,my arm is broken and the bone is visible. please advise,EMERGENCY
+35,"hi, my arm is broken and the bone is visible and i am worried",EMERGENCY
+35,hello doctor my arm is broken and the bone is visible,EMERGENCY
+35,i am experiencing my arm is broken and the bone is visible,EMERGENCY
+36,i feel my heart racing very fast and i almost fainted,EMERGENCY
+36,i have i feel my heart racing very fast and i almost fainted,EMERGENCY
+36,"doctor, i feel my heart racing very fast and i almost fainted",EMERGENCY
+36,i feel my heart racing very fast and i almost fainted. what should i do,EMERGENCY
+36,i feel my heart racing very fast and i almost fainted. please advise,EMERGENCY
+36,"hi, i feel my heart racing very fast and i almost fainted and i am worried",EMERGENCY
+36,hello doctor i feel my heart racing very fast and i almost fainted,EMERGENCY
+36,i am experiencing i feel my heart racing very fast and i almost fainted,EMERGENCY
+37,sudden severe pain between my shoulder blades tearing in nature,EMERGENCY
+37,i have sudden severe pain between my shoulder blades tearing in nature,EMERGENCY
+37,"doctor, sudden severe pain between my shoulder blades tearing in nature",EMERGENCY
+37,sudden severe pain between my shoulder blades tearing in nature. what should i do,EMERGENCY
+37,sudden severe pain between my shoulder blades tearing in nature. please advise,EMERGENCY
+37,"hi, sudden severe pain between my shoulder blades tearing in nature and i am worried",EMERGENCY
+37,hello doctor sudden severe pain between my shoulder blades tearing in nature,EMERGENCY
+37,i am experiencing sudden severe pain between my shoulder blades tearing in nature,EMERGENCY
+38,fever with fits in my three year old right now,EMERGENCY
+38,i have fever with fits in my three year old right now,EMERGENCY
+38,"doctor, fever with fits in my three year old right now",EMERGENCY
+38,fever with fits in my three year old right now. what should i do,EMERGENCY
+38,fever with fits in my three year old right now. please advise,EMERGENCY
+38,"hi, fever with fits in my three year old right now and i am worried",EMERGENCY
+38,hello doctor fever with fits in my three year old right now,EMERGENCY
+38,i am experiencing fever with fits in my three year old right now,EMERGENCY
+39,i cannot move my legs since this morning,EMERGENCY
+39,i have i cannot move my legs since this morning,EMERGENCY
+39,"doctor, i cannot move my legs since this morning",EMERGENCY
+39,i cannot move my legs since this morning. what should i do,EMERGENCY
+39,i cannot move my legs since this morning. please advise,EMERGENCY
+39,"hi, i cannot move my legs since this morning and i am worried",EMERGENCY
+39,hello doctor i cannot move my legs since this morning,EMERGENCY
+39,i am experiencing i cannot move my legs since this morning,EMERGENCY
+40,"increased wheezing and shortness of breath, i am asthmatic",HIGH
+40,"i have increased wheezing and shortness of breath, i am asthmatic",HIGH
+40,"doctor, increased wheezing and shortness of breath, i am asthmatic",HIGH
+40,"increased wheezing and shortness of breath, i am asthmatic. what should i do",HIGH
+40,"increased wheezing and shortness of breath, i am asthmatic. please advise",HIGH
+40,"hi, increased wheezing and shortness of breath, i am asthmatic and i am worried",HIGH
+40,"hello doctor increased wheezing and shortness of breath, i am asthmatic",HIGH
+40,"i am experiencing increased wheezing and shortness of breath, i am asthmatic",HIGH
+41,"shortness of breath when i walk up stairs, started this week",HIGH
+41,"i have shortness of breath when i walk up stairs, started this week",HIGH
+41,"doctor, shortness of breath when i walk up stairs, started this week",HIGH
+41,"shortness of breath when i walk up stairs, started this week. what should i do",HIGH
+41,"shortness of breath when i walk up stairs, started this week. please advise",HIGH
+41,"hi, shortness of breath when i walk up stairs, started this week and i am worried",HIGH
+41,"hello doctor shortness of breath when i walk up stairs, started this week",HIGH
+41,"i am experiencing shortness of breath when i walk up stairs, started this week",HIGH
+42,fever of 103 for four days with shivering,HIGH
+42,i have fever of 103 for four days with shivering,HIGH
+42,"doctor, fever of 103 for four days with shivering",HIGH
+42,fever of 103 for four days with shivering. what should i do,HIGH
+42,fever of 103 for four days with shivering. please advise,HIGH
+42,"hi, fever of 103 for four days with shivering and i am worried",HIGH
+42,hello doctor fever of 103 for four days with shivering,HIGH
+42,i am experiencing fever of 103 for four days with shivering,HIGH
+43,i am 71 and have had fever and weakness for three days,HIGH
+43,i have i am 71 and have had fever and weakness for three days,HIGH
+43,"doctor, i am 71 and have had fever and weakness for three days",HIGH
+43,i am 71 and have had fever and weakness for three days. what should i do,HIGH
+43,i am 71 and have had fever and weakness for three days. please advise,HIGH
+43,"hi, i am 71 and have had fever and weakness for three days and i am worried",HIGH
+43,hello doctor i am 71 and have had fever and weakness for three days,HIGH
+43,i am experiencing i am 71 and have had fever and weakness for three days,HIGH
+44,my two year old has fever and is refusing all fluids,HIGH
+44,i have my two year old has fever and is refusing all fluids,HIGH
+44,"doctor, my two year old has fever and is refusing all fluids",HIGH
+44,my two year old has fever and is refusing all fluids. what should i do,HIGH
+44,my two year old has fever and is refusing all fluids. please advise,HIGH
+44,"hi, my two year old has fever and is refusing all fluids and i am worried",HIGH
+44,hello doctor my two year old has fever and is refusing all fluids,HIGH
+44,i am experiencing my two year old has fever and is refusing all fluids,HIGH
+45,"vomiting everything i drink since yesterday, feeling very dry",HIGH
+45,"i have vomiting everything i drink since yesterday, feeling very dry",HIGH
+45,"doctor, vomiting everything i drink since yesterday, feeling very dry",HIGH
+45,"vomiting everything i drink since yesterday, feeling very dry. what should i do",HIGH
+45,"vomiting everything i drink since yesterday, feeling very dry. please advise",HIGH
+45,"hi, vomiting everything i drink since yesterday, feeling very dry and i am worried",HIGH
+45,"hello doctor vomiting everything i drink since yesterday, feeling very dry",HIGH
+45,"i am experiencing vomiting everything i drink since yesterday, feeling very dry",HIGH
+46,watery diarrhoea fifteen times today and dizzy on standing,HIGH
+46,i have watery diarrhoea fifteen times today and dizzy on standing,HIGH
+46,"doctor, watery diarrhoea fifteen times today and dizzy on standing",HIGH
+46,watery diarrhoea fifteen times today and dizzy on standing. what should i do,HIGH
+46,watery diarrhoea fifteen times today and dizzy on standing. please advise,HIGH
+46,"hi, watery diarrhoea fifteen times today and dizzy on standing and i am worried",HIGH
+46,hello doctor watery diarrhoea fifteen times today and dizzy on standing,HIGH
+46,i am experiencing watery diarrhoea fifteen times today and dizzy on standing,HIGH
+47,i am diabetic and my foot wound is swollen with pus,HIGH
+47,i have i am diabetic and my foot wound is swollen with pus,HIGH
+47,"doctor, i am diabetic and my foot wound is swollen with pus",HIGH
+47,i am diabetic and my foot wound is swollen with pus. what should i do,HIGH
+47,i am diabetic and my foot wound is swollen with pus. please advise,HIGH
+47,"hi, i am diabetic and my foot wound is swollen with pus and i am worried",HIGH
+47,hello doctor i am diabetic and my foot wound is swollen with pus,HIGH
+47,i am experiencing i am diabetic and my foot wound is swollen with pus,HIGH
+48,blood in my urine with burning and back pain,HIGH
+48,i have blood in my urine with burning and back pain,HIGH
+48,"doctor, blood in my urine with burning and back pain",HIGH
+48,blood in my urine with burning and back pain. what should i do,HIGH
+48,blood in my urine with burning and back pain. please advise,HIGH
+48,"hi, blood in my urine with burning and back pain and i am worried",HIGH
+48,hello doctor blood in my urine with burning and back pain,HIGH
+48,i am experiencing blood in my urine with burning and back pain,HIGH
+49,black stools for two days and i feel lightheaded,HIGH
+49,i have black stools for two days and i feel lightheaded,HIGH
+49,"doctor, black stools for two days and i feel lightheaded",HIGH
+49,black stools for two days and i feel lightheaded. what should i do,HIGH
+49,black stools for two days and i feel lightheaded. please advise,HIGH
+49,"hi, black stools for two days and i feel lightheaded and i am worried",HIGH
+49,hello doctor black stools for two days and i feel lightheaded,HIGH
+49,i am experiencing black stools for two days and i feel lightheaded,HIGH
+50,severe one sided abdominal pain moving to my groin,HIGH
+50,i have severe one sided abdominal pain moving to my groin,HIGH
+50,"doctor, severe one sided abdominal pain moving to my groin",HIGH
+50,severe one sided abdominal pain moving to my groin. what should i do,HIGH
+50,severe one sided abdominal pain moving to my groin. please advise,HIGH
+50,"hi, severe one sided abdominal pain moving to my groin and i am worried",HIGH
+50,hello doctor severe one sided abdominal pain moving to my groin,HIGH
+50,i am experiencing severe one sided abdominal pain moving to my groin,HIGH
+51,"painful swollen red calf, it feels warm",HIGH
+51,"i have painful swollen red calf, it feels warm",HIGH
+51,"doctor, painful swollen red calf, it feels warm",HIGH
+51,"painful swollen red calf, it feels warm. what should i do",HIGH
+51,"painful swollen red calf, it feels warm. please advise",HIGH
+51,"hi, painful swollen red calf, it feels warm and i am worried",HIGH
+51,"hello doctor painful swollen red calf, it feels warm",HIGH
+51,"i am experiencing painful swollen red calf, it feels warm",HIGH
+52,fever with a productive cough and pain on breathing in,HIGH
+52,i have fever with a productive cough and pain on breathing in,HIGH
+52,"doctor, fever with a productive cough and pain on breathing in",HIGH
+52,fever with a productive cough and pain on breathing in. what should i do,HIGH
+52,fever with a productive cough and pain on breathing in. please advise,HIGH
+52,"hi, fever with a productive cough and pain on breathing in and i am worried",HIGH
+52,hello doctor fever with a productive cough and pain on breathing in,HIGH
+52,i am experiencing fever with a productive cough and pain on breathing in,HIGH
+53,my blood sugar reading is above 400 and i feel very thirsty,HIGH
+53,i have my blood sugar reading is above 400 and i feel very thirsty,HIGH
+53,"doctor, my blood sugar reading is above 400 and i feel very thirsty",HIGH
+53,my blood sugar reading is above 400 and i feel very thirsty. what should i do,HIGH
+53,my blood sugar reading is above 400 and i feel very thirsty. please advise,HIGH
+53,"hi, my blood sugar reading is above 400 and i feel very thirsty and i am worried",HIGH
+53,hello doctor my blood sugar reading is above 400 and i feel very thirsty,HIGH
+53,i am experiencing my blood sugar reading is above 400 and i feel very thirsty,HIGH
+54,palpitations with dizziness on and off today,HIGH
+54,i have palpitations with dizziness on and off today,HIGH
+54,"doctor, palpitations with dizziness on and off today",HIGH
+54,palpitations with dizziness on and off today. what should i do,HIGH
+54,palpitations with dizziness on and off today. please advise,HIGH
+54,"hi, palpitations with dizziness on and off today and i am worried",HIGH
+54,hello doctor palpitations with dizziness on and off today,HIGH
+54,i am experiencing palpitations with dizziness on and off today,HIGH
+55,i am pregnant and have not felt the baby move since morning,HIGH
+55,i have i am pregnant and have not felt the baby move since morning,HIGH
+55,"doctor, i am pregnant and have not felt the baby move since morning",HIGH
+55,i am pregnant and have not felt the baby move since morning. what should i do,HIGH
+55,i am pregnant and have not felt the baby move since morning. please advise,HIGH
+55,"hi, i am pregnant and have not felt the baby move since morning and i am worried",HIGH
+55,hello doctor i am pregnant and have not felt the baby move since morning,HIGH
+55,i am experiencing i am pregnant and have not felt the baby move since morning,HIGH
+56,eye is red and painful with blurred vision,HIGH
+56,i have eye is red and painful with blurred vision,HIGH
+56,"doctor, eye is red and painful with blurred vision",HIGH
+56,eye is red and painful with blurred vision. what should i do,HIGH
+56,eye is red and painful with blurred vision. please advise,HIGH
+56,"hi, eye is red and painful with blurred vision and i am worried",HIGH
+56,hello doctor eye is red and painful with blurred vision,HIGH
+56,i am experiencing eye is red and painful with blurred vision,HIGH
+57,spreading red skin around a wound with fever,HIGH
+57,i have spreading red skin around a wound with fever,HIGH
+57,"doctor, spreading red skin around a wound with fever",HIGH
+57,spreading red skin around a wound with fever. what should i do,HIGH
+57,spreading red skin around a wound with fever. please advise,HIGH
+57,"hi, spreading red skin around a wound with fever and i am worried",HIGH
+57,hello doctor spreading red skin around a wound with fever,HIGH
+57,i am experiencing spreading red skin around a wound with fever,HIGH
+58,severe testicular pain that started a few hours ago,HIGH
+58,i have severe testicular pain that started a few hours ago,HIGH
+58,"doctor, severe testicular pain that started a few hours ago",HIGH
+58,severe testicular pain that started a few hours ago. what should i do,HIGH
+58,severe testicular pain that started a few hours ago. please advise,HIGH
+58,"hi, severe testicular pain that started a few hours ago and i am worried",HIGH
+58,hello doctor severe testicular pain that started a few hours ago,HIGH
+58,i am experiencing severe testicular pain that started a few hours ago,HIGH
+59,i am on blood thinners and fell down the stairs,HIGH
+59,i have i am on blood thinners and fell down the stairs,HIGH
+59,"doctor, i am on blood thinners and fell down the stairs",HIGH
+59,i am on blood thinners and fell down the stairs. what should i do,HIGH
+59,i am on blood thinners and fell down the stairs. please advise,HIGH
+59,"hi, i am on blood thinners and fell down the stairs and i am worried",HIGH
+59,hello doctor i am on blood thinners and fell down the stairs,HIGH
+59,i am experiencing i am on blood thinners and fell down the stairs,HIGH
+60,severe ear pain with discharge and fever,HIGH
+60,i have severe ear pain with discharge and fever,HIGH
+60,"doctor, severe ear pain with discharge and fever",HIGH
+60,severe ear pain with discharge and fever. what should i do,HIGH
+60,severe ear pain with discharge and fever. please advise,HIGH
+60,"hi, severe ear pain with discharge and fever and i am worried",HIGH
+60,hello doctor severe ear pain with discharge and fever,HIGH
+60,i am experiencing severe ear pain with discharge and fever,HIGH
+61,i am 68 and my ankles have swollen and i get breathless lying down,HIGH
+61,i have i am 68 and my ankles have swollen and i get breathless lying down,HIGH
+61,"doctor, i am 68 and my ankles have swollen and i get breathless lying down",HIGH
+61,i am 68 and my ankles have swollen and i get breathless lying down. what should i do,HIGH
+61,i am 68 and my ankles have swollen and i get breathless lying down. please advise,HIGH
+61,"hi, i am 68 and my ankles have swollen and i get breathless lying down and i am worried",HIGH
+61,hello doctor i am 68 and my ankles have swollen and i get breathless lying down,HIGH
+61,i am experiencing i am 68 and my ankles have swollen and i get breathless lying down,HIGH
+62,unable to keep any food down after chemotherapy,HIGH
+62,i have unable to keep any food down after chemotherapy,HIGH
+62,"doctor, unable to keep any food down after chemotherapy",HIGH
+62,unable to keep any food down after chemotherapy. what should i do,HIGH
+62,unable to keep any food down after chemotherapy. please advise,HIGH
+62,"hi, unable to keep any food down after chemotherapy and i am worried",HIGH
+62,hello doctor unable to keep any food down after chemotherapy,HIGH
+62,i am experiencing unable to keep any food down after chemotherapy,HIGH
+63,sudden severe back pain and i cannot pass urine properly,HIGH
+63,i have sudden severe back pain and i cannot pass urine properly,HIGH
+63,"doctor, sudden severe back pain and i cannot pass urine properly",HIGH
+63,sudden severe back pain and i cannot pass urine properly. what should i do,HIGH
+63,sudden severe back pain and i cannot pass urine properly. please advise,HIGH
+63,"hi, sudden severe back pain and i cannot pass urine properly and i am worried",HIGH
+63,hello doctor sudden severe back pain and i cannot pass urine properly,HIGH
+63,i am experiencing sudden severe back pain and i cannot pass urine properly,HIGH
+64,high fever with a rash that does not fade when pressed,HIGH
+64,i have high fever with a rash that does not fade when pressed,HIGH
+64,"doctor, high fever with a rash that does not fade when pressed",HIGH
+64,high fever with a rash that does not fade when pressed. what should i do,HIGH
+64,high fever with a rash that does not fade when pressed. please advise,HIGH
+64,"hi, high fever with a rash that does not fade when pressed and i am worried",HIGH
+64,hello doctor high fever with a rash that does not fade when pressed,HIGH
+64,i am experiencing high fever with a rash that does not fade when pressed,HIGH
+65,i am 80 and became more confused than usual today,HIGH
+65,i have i am 80 and became more confused than usual today,HIGH
+65,"doctor, i am 80 and became more confused than usual today",HIGH
+65,i am 80 and became more confused than usual today. what should i do,HIGH
+65,i am 80 and became more confused than usual today. please advise,HIGH
+65,"hi, i am 80 and became more confused than usual today and i am worried",HIGH
+65,hello doctor i am 80 and became more confused than usual today,HIGH
+65,i am experiencing i am 80 and became more confused than usual today,HIGH
+66,bad headache with vomiting and my vision is doubled,HIGH
+66,i have bad headache with vomiting and my vision is doubled,HIGH
+66,"doctor, bad headache with vomiting and my vision is doubled",HIGH
+66,bad headache with vomiting and my vision is doubled. what should i do,HIGH
+66,bad headache with vomiting and my vision is doubled. please advise,HIGH
+66,"hi, bad headache with vomiting and my vision is doubled and i am worried",HIGH
+66,hello doctor bad headache with vomiting and my vision is doubled,HIGH
+66,i am experiencing bad headache with vomiting and my vision is doubled,HIGH
+67,infant of six weeks with fever,HIGH
+67,i have infant of six weeks with fever,HIGH
+67,"doctor, infant of six weeks with fever",HIGH
+67,infant of six weeks with fever. what should i do,HIGH
+67,infant of six weeks with fever. please advise,HIGH
+67,"hi, infant of six weeks with fever and i am worried",HIGH
+67,hello doctor infant of six weeks with fever,HIGH
+67,i am experiencing infant of six weeks with fever,HIGH
+68,i am asthmatic and my inhaler is not helping much today,HIGH
+68,i have i am asthmatic and my inhaler is not helping much today,HIGH
+68,"doctor, i am asthmatic and my inhaler is not helping much today",HIGH
+68,i am asthmatic and my inhaler is not helping much today. what should i do,HIGH
+68,i am asthmatic and my inhaler is not helping much today. please advise,HIGH
+68,"hi, i am asthmatic and my inhaler is not helping much today and i am worried",HIGH
+68,hello doctor i am asthmatic and my inhaler is not helping much today,HIGH
+68,i am experiencing i am asthmatic and my inhaler is not helping much today,HIGH
+69,fever for five days and now i feel breathless when walking,HIGH
+69,i have fever for five days and now i feel breathless when walking,HIGH
+69,"doctor, fever for five days and now i feel breathless when walking",HIGH
+69,fever for five days and now i feel breathless when walking. what should i do,HIGH
+69,fever for five days and now i feel breathless when walking. please advise,HIGH
+69,"hi, fever for five days and now i feel breathless when walking and i am worried",HIGH
+69,hello doctor fever for five days and now i feel breathless when walking,HIGH
+69,i am experiencing fever for five days and now i feel breathless when walking,HIGH
+70,i am 74 with a bad cough and my oxygen reading is low,HIGH
+70,i have i am 74 with a bad cough and my oxygen reading is low,HIGH
+70,"doctor, i am 74 with a bad cough and my oxygen reading is low",HIGH
+70,i am 74 with a bad cough and my oxygen reading is low. what should i do,HIGH
+70,i am 74 with a bad cough and my oxygen reading is low. please advise,HIGH
+70,"hi, i am 74 with a bad cough and my oxygen reading is low and i am worried",HIGH
+70,hello doctor i am 74 with a bad cough and my oxygen reading is low,HIGH
+70,i am experiencing i am 74 with a bad cough and my oxygen reading is low,HIGH
+71,severe pain and swelling in my hand after a dog bite yesterday,HIGH
+71,i have severe pain and swelling in my hand after a dog bite yesterday,HIGH
+71,"doctor, severe pain and swelling in my hand after a dog bite yesterday",HIGH
+71,severe pain and swelling in my hand after a dog bite yesterday. what should i do,HIGH
+71,severe pain and swelling in my hand after a dog bite yesterday. please advise,HIGH
+71,"hi, severe pain and swelling in my hand after a dog bite yesterday and i am worried",HIGH
+71,hello doctor severe pain and swelling in my hand after a dog bite yesterday,HIGH
+71,i am experiencing severe pain and swelling in my hand after a dog bite yesterday,HIGH
+72,jaundice with yellow eyes and dark urine since two days,HIGH
+72,i have jaundice with yellow eyes and dark urine since two days,HIGH
+72,"doctor, jaundice with yellow eyes and dark urine since two days",HIGH
+72,jaundice with yellow eyes and dark urine since two days. what should i do,HIGH
+72,jaundice with yellow eyes and dark urine since two days. please advise,HIGH
+72,"hi, jaundice with yellow eyes and dark urine since two days and i am worried",HIGH
+72,hello doctor jaundice with yellow eyes and dark urine since two days,HIGH
+72,i am experiencing jaundice with yellow eyes and dark urine since two days,HIGH
+73,i am pregnant with a bad headache and swollen hands,HIGH
+73,i have i am pregnant with a bad headache and swollen hands,HIGH
+73,"doctor, i am pregnant with a bad headache and swollen hands",HIGH
+73,i am pregnant with a bad headache and swollen hands. what should i do,HIGH
+73,i am pregnant with a bad headache and swollen hands. please advise,HIGH
+73,"hi, i am pregnant with a bad headache and swollen hands and i am worried",HIGH
+73,hello doctor i am pregnant with a bad headache and swollen hands,HIGH
+73,i am experiencing i am pregnant with a bad headache and swollen hands,HIGH
+74,my wound from surgery is opening and leaking fluid,HIGH
+74,i have my wound from surgery is opening and leaking fluid,HIGH
+74,"doctor, my wound from surgery is opening and leaking fluid",HIGH
+74,my wound from surgery is opening and leaking fluid. what should i do,HIGH
+74,my wound from surgery is opening and leaking fluid. please advise,HIGH
+74,"hi, my wound from surgery is opening and leaking fluid and i am worried",HIGH
+74,hello doctor my wound from surgery is opening and leaking fluid,HIGH
+74,i am experiencing my wound from surgery is opening and leaking fluid,HIGH
+75,severe vomiting for a day and i have not passed urine since morning,HIGH
+75,i have severe vomiting for a day and i have not passed urine since morning,HIGH
+75,"doctor, severe vomiting for a day and i have not passed urine since morning",HIGH
+75,severe vomiting for a day and i have not passed urine since morning. what should i do,HIGH
+75,severe vomiting for a day and i have not passed urine since morning. please advise,HIGH
+75,"hi, severe vomiting for a day and i have not passed urine since morning and i am worried",HIGH
+75,hello doctor severe vomiting for a day and i have not passed urine since morning,HIGH
+75,i am experiencing severe vomiting for a day and i have not passed urine since morning,HIGH
+76,i have kidney disease and my legs have swollen suddenly,HIGH
+76,i have i have kidney disease and my legs have swollen suddenly,HIGH
+76,"doctor, i have kidney disease and my legs have swollen suddenly",HIGH
+76,i have kidney disease and my legs have swollen suddenly. what should i do,HIGH
+76,i have kidney disease and my legs have swollen suddenly. please advise,HIGH
+76,"hi, i have kidney disease and my legs have swollen suddenly and i am worried",HIGH
+76,hello doctor i have kidney disease and my legs have swollen suddenly,HIGH
+76,i am experiencing i have kidney disease and my legs have swollen suddenly,HIGH
+77,a lump in my breast that has grown quickly this month,HIGH
+77,i have a lump in my breast that has grown quickly this month,HIGH
+77,"doctor, a lump in my breast that has grown quickly this month",HIGH
+77,a lump in my breast that has grown quickly this month. what should i do,HIGH
+77,a lump in my breast that has grown quickly this month. please advise,HIGH
+77,"hi, a lump in my breast that has grown quickly this month and i am worried",HIGH
+77,hello doctor a lump in my breast that has grown quickly this month,HIGH
+77,i am experiencing a lump in my breast that has grown quickly this month,HIGH
+78,i am 66 and had a brief episode where i could not speak,HIGH
+78,i have i am 66 and had a brief episode where i could not speak,HIGH
+78,"doctor, i am 66 and had a brief episode where i could not speak",HIGH
+78,i am 66 and had a brief episode where i could not speak. what should i do,HIGH
+78,i am 66 and had a brief episode where i could not speak. please advise,HIGH
+78,"hi, i am 66 and had a brief episode where i could not speak and i am worried",HIGH
+78,hello doctor i am 66 and had a brief episode where i could not speak,HIGH
+78,i am experiencing i am 66 and had a brief episode where i could not speak,HIGH
+79,my blood pressure reading is 190 over 110 and i feel unwell,HIGH
+79,i have my blood pressure reading is 190 over 110 and i feel unwell,HIGH
+79,"doctor, my blood pressure reading is 190 over 110 and i feel unwell",HIGH
+79,my blood pressure reading is 190 over 110 and i feel unwell. what should i do,HIGH
+79,my blood pressure reading is 190 over 110 and i feel unwell. please advise,HIGH
+79,"hi, my blood pressure reading is 190 over 110 and i feel unwell and i am worried",HIGH
+79,hello doctor my blood pressure reading is 190 over 110 and i feel unwell,HIGH
+79,i am experiencing my blood pressure reading is 190 over 110 and i feel unwell,HIGH
+80,dry cough that has lasted six days and is not improving,MODERATE
+80,i have dry cough that has lasted six days and is not improving,MODERATE
+80,"doctor, dry cough that has lasted six days and is not improving",MODERATE
+80,dry cough that has lasted six days and is not improving. what should i do,MODERATE
+80,dry cough that has lasted six days and is not improving. please advise,MODERATE
+80,"hi, dry cough that has lasted six days and is not improving and i am worried",MODERATE
+80,hello doctor dry cough that has lasted six days and is not improving,MODERATE
+80,i am experiencing dry cough that has lasted six days and is not improving,MODERATE
+81,"fever, cough, body ache and fatigue for three days",MODERATE
+81,"i have fever, cough, body ache and fatigue for three days",MODERATE
+81,"doctor, fever, cough, body ache and fatigue for three days",MODERATE
+81,"fever, cough, body ache and fatigue for three days. what should i do",MODERATE
+81,"fever, cough, body ache and fatigue for three days. please advise",MODERATE
+81,"hi, fever, cough, body ache and fatigue for three days and i am worried",MODERATE
+81,"hello doctor fever, cough, body ache and fatigue for three days",MODERATE
+81,"i am experiencing fever, cough, body ache and fatigue for three days",MODERATE
+82,"cold, fever and headache for seven days",MODERATE
+82,"i have cold, fever and headache for seven days",MODERATE
+82,"doctor, cold, fever and headache for seven days",MODERATE
+82,"cold, fever and headache for seven days. what should i do",MODERATE
+82,"cold, fever and headache for seven days. please advise",MODERATE
+82,"hi, cold, fever and headache for seven days and i am worried",MODERATE
+82,"hello doctor cold, fever and headache for seven days",MODERATE
+82,"i am experiencing cold, fever and headache for seven days",MODERATE
+83,sore throat with difficulty swallowing solid food for four days,MODERATE
+83,i have sore throat with difficulty swallowing solid food for four days,MODERATE
+83,"doctor, sore throat with difficulty swallowing solid food for four days",MODERATE
+83,sore throat with difficulty swallowing solid food for four days. what should i do,MODERATE
+83,sore throat with difficulty swallowing solid food for four days. please advise,MODERATE
+83,"hi, sore throat with difficulty swallowing solid food for four days and i am worried",MODERATE
+83,hello doctor sore throat with difficulty swallowing solid food for four days,MODERATE
+83,i am experiencing sore throat with difficulty swallowing solid food for four days,MODERATE
+84,headache almost every day for two weeks,MODERATE
+84,i have headache almost every day for two weeks,MODERATE
+84,"doctor, headache almost every day for two weeks",MODERATE
+84,headache almost every day for two weeks. what should i do,MODERATE
+84,headache almost every day for two weeks. please advise,MODERATE
+84,"hi, headache almost every day for two weeks and i am worried",MODERATE
+84,hello doctor headache almost every day for two weeks,MODERATE
+84,i am experiencing headache almost every day for two weeks,MODERATE
+85,stomach pain and loose motions for four days,MODERATE
+85,i have stomach pain and loose motions for four days,MODERATE
+85,"doctor, stomach pain and loose motions for four days",MODERATE
+85,stomach pain and loose motions for four days. what should i do,MODERATE
+85,stomach pain and loose motions for four days. please advise,MODERATE
+85,"hi, stomach pain and loose motions for four days and i am worried",MODERATE
+85,hello doctor stomach pain and loose motions for four days,MODERATE
+85,i am experiencing stomach pain and loose motions for four days,MODERATE
+86,burning while passing urine for three days,MODERATE
+86,i have burning while passing urine for three days,MODERATE
+86,"doctor, burning while passing urine for three days",MODERATE
+86,burning while passing urine for three days. what should i do,MODERATE
+86,burning while passing urine for three days. please advise,MODERATE
+86,"hi, burning while passing urine for three days and i am worried",MODERATE
+86,hello doctor burning while passing urine for three days,MODERATE
+86,i am experiencing burning while passing urine for three days,MODERATE
+87,itchy rash on both arms spreading slowly over a week,MODERATE
+87,i have itchy rash on both arms spreading slowly over a week,MODERATE
+87,"doctor, itchy rash on both arms spreading slowly over a week",MODERATE
+87,itchy rash on both arms spreading slowly over a week. what should i do,MODERATE
+87,itchy rash on both arms spreading slowly over a week. please advise,MODERATE
+87,"hi, itchy rash on both arms spreading slowly over a week and i am worried",MODERATE
+87,hello doctor itchy rash on both arms spreading slowly over a week,MODERATE
+87,i am experiencing itchy rash on both arms spreading slowly over a week,MODERATE
+88,lower back pain for ten days after lifting weights,MODERATE
+88,i have lower back pain for ten days after lifting weights,MODERATE
+88,"doctor, lower back pain for ten days after lifting weights",MODERATE
+88,lower back pain for ten days after lifting weights. what should i do,MODERATE
+88,lower back pain for ten days after lifting weights. please advise,MODERATE
+88,"hi, lower back pain for ten days after lifting weights and i am worried",MODERATE
+88,hello doctor lower back pain for ten days after lifting weights,MODERATE
+88,i am experiencing lower back pain for ten days after lifting weights,MODERATE
+89,knee pain and swelling for a week after a fall,MODERATE
+89,i have knee pain and swelling for a week after a fall,MODERATE
+89,"doctor, knee pain and swelling for a week after a fall",MODERATE
+89,knee pain and swelling for a week after a fall. what should i do,MODERATE
+89,knee pain and swelling for a week after a fall. please advise,MODERATE
+89,"hi, knee pain and swelling for a week after a fall and i am worried",MODERATE
+89,hello doctor knee pain and swelling for a week after a fall,MODERATE
+89,i am experiencing knee pain and swelling for a week after a fall,MODERATE
+90,ear blocked with mild pain for five days,MODERATE
+90,i have ear blocked with mild pain for five days,MODERATE
+90,"doctor, ear blocked with mild pain for five days",MODERATE
+90,ear blocked with mild pain for five days. what should i do,MODERATE
+90,ear blocked with mild pain for five days. please advise,MODERATE
+90,"hi, ear blocked with mild pain for five days and i am worried",MODERATE
+90,hello doctor ear blocked with mild pain for five days,MODERATE
+90,i am experiencing ear blocked with mild pain for five days,MODERATE
+91,acidity and chest burning after meals for two weeks,MODERATE
+91,i have acidity and chest burning after meals for two weeks,MODERATE
+91,"doctor, acidity and chest burning after meals for two weeks",MODERATE
+91,acidity and chest burning after meals for two weeks. what should i do,MODERATE
+91,acidity and chest burning after meals for two weeks. please advise,MODERATE
+91,"hi, acidity and chest burning after meals for two weeks and i am worried",MODERATE
+91,hello doctor acidity and chest burning after meals for two weeks,MODERATE
+91,i am experiencing acidity and chest burning after meals for two weeks,MODERATE
+92,dizziness on standing up for the past week,MODERATE
+92,i have dizziness on standing up for the past week,MODERATE
+92,"doctor, dizziness on standing up for the past week",MODERATE
+92,dizziness on standing up for the past week. what should i do,MODERATE
+92,dizziness on standing up for the past week. please advise,MODERATE
+92,"hi, dizziness on standing up for the past week and i am worried",MODERATE
+92,hello doctor dizziness on standing up for the past week,MODERATE
+92,i am experiencing dizziness on standing up for the past week,MODERATE
+93,hair fall increasing for the last three months,MODERATE
+93,i have hair fall increasing for the last three months,MODERATE
+93,"doctor, hair fall increasing for the last three months",MODERATE
+93,hair fall increasing for the last three months. what should i do,MODERATE
+93,hair fall increasing for the last three months. please advise,MODERATE
+93,"hi, hair fall increasing for the last three months and i am worried",MODERATE
+93,hello doctor hair fall increasing for the last three months,MODERATE
+93,i am experiencing hair fall increasing for the last three months,MODERATE
+94,mouth ulcers that keep coming back for a month,MODERATE
+94,i have mouth ulcers that keep coming back for a month,MODERATE
+94,"doctor, mouth ulcers that keep coming back for a month",MODERATE
+94,mouth ulcers that keep coming back for a month. what should i do,MODERATE
+94,mouth ulcers that keep coming back for a month. please advise,MODERATE
+94,"hi, mouth ulcers that keep coming back for a month and i am worried",MODERATE
+94,hello doctor mouth ulcers that keep coming back for a month,MODERATE
+94,i am experiencing mouth ulcers that keep coming back for a month,MODERATE
+95,toothache for four days that worsens at night,MODERATE
+95,i have toothache for four days that worsens at night,MODERATE
+95,"doctor, toothache for four days that worsens at night",MODERATE
+95,toothache for four days that worsens at night. what should i do,MODERATE
+95,toothache for four days that worsens at night. please advise,MODERATE
+95,"hi, toothache for four days that worsens at night and i am worried",MODERATE
+95,hello doctor toothache for four days that worsens at night,MODERATE
+95,i am experiencing toothache for four days that worsens at night,MODERATE
+96,irregular periods for the last four months,MODERATE
+96,i have irregular periods for the last four months,MODERATE
+96,"doctor, irregular periods for the last four months",MODERATE
+96,irregular periods for the last four months. what should i do,MODERATE
+96,irregular periods for the last four months. please advise,MODERATE
+96,"hi, irregular periods for the last four months and i am worried",MODERATE
+96,hello doctor irregular periods for the last four months,MODERATE
+96,i am experiencing irregular periods for the last four months,MODERATE
+97,cannot sleep properly for three weeks and feel anxious,MODERATE
+97,i have cannot sleep properly for three weeks and feel anxious,MODERATE
+97,"doctor, cannot sleep properly for three weeks and feel anxious",MODERATE
+97,cannot sleep properly for three weeks and feel anxious. what should i do,MODERATE
+97,cannot sleep properly for three weeks and feel anxious. please advise,MODERATE
+97,"hi, cannot sleep properly for three weeks and feel anxious and i am worried",MODERATE
+97,hello doctor cannot sleep properly for three weeks and feel anxious,MODERATE
+97,i am experiencing cannot sleep properly for three weeks and feel anxious,MODERATE
+98,weight loss of four kilos over two months without trying,MODERATE
+98,i have weight loss of four kilos over two months without trying,MODERATE
+98,"doctor, weight loss of four kilos over two months without trying",MODERATE
+98,weight loss of four kilos over two months without trying. what should i do,MODERATE
+98,weight loss of four kilos over two months without trying. please advise,MODERATE
+98,"hi, weight loss of four kilos over two months without trying and i am worried",MODERATE
+98,hello doctor weight loss of four kilos over two months without trying,MODERATE
+98,i am experiencing weight loss of four kilos over two months without trying,MODERATE
+99,swollen gums that bleed when brushing for two weeks,MODERATE
+99,i have swollen gums that bleed when brushing for two weeks,MODERATE
+99,"doctor, swollen gums that bleed when brushing for two weeks",MODERATE
+99,swollen gums that bleed when brushing for two weeks. what should i do,MODERATE
+99,swollen gums that bleed when brushing for two weeks. please advise,MODERATE
+99,"hi, swollen gums that bleed when brushing for two weeks and i am worried",MODERATE
+99,hello doctor swollen gums that bleed when brushing for two weeks,MODERATE
+99,i am experiencing swollen gums that bleed when brushing for two weeks,MODERATE
+100,persistent tiredness for a month even after resting,MODERATE
+100,i have persistent tiredness for a month even after resting,MODERATE
+100,"doctor, persistent tiredness for a month even after resting",MODERATE
+100,persistent tiredness for a month even after resting. what should i do,MODERATE
+100,persistent tiredness for a month even after resting. please advise,MODERATE
+100,"hi, persistent tiredness for a month even after resting and i am worried",MODERATE
+100,hello doctor persistent tiredness for a month even after resting,MODERATE
+100,i am experiencing persistent tiredness for a month even after resting,MODERATE
+101,recurring pimples with painful boils for six weeks,MODERATE
+101,i have recurring pimples with painful boils for six weeks,MODERATE
+101,"doctor, recurring pimples with painful boils for six weeks",MODERATE
+101,recurring pimples with painful boils for six weeks. what should i do,MODERATE
+101,recurring pimples with painful boils for six weeks. please advise,MODERATE
+101,"hi, recurring pimples with painful boils for six weeks and i am worried",MODERATE
+101,hello doctor recurring pimples with painful boils for six weeks,MODERATE
+101,i am experiencing recurring pimples with painful boils for six weeks,MODERATE
+102,joint pain in fingers every morning for a month,MODERATE
+102,i have joint pain in fingers every morning for a month,MODERATE
+102,"doctor, joint pain in fingers every morning for a month",MODERATE
+102,joint pain in fingers every morning for a month. what should i do,MODERATE
+102,joint pain in fingers every morning for a month. please advise,MODERATE
+102,"hi, joint pain in fingers every morning for a month and i am worried",MODERATE
+102,hello doctor joint pain in fingers every morning for a month,MODERATE
+102,i am experiencing joint pain in fingers every morning for a month,MODERATE
+103,blurred vision when reading for the last two weeks,MODERATE
+103,i have blurred vision when reading for the last two weeks,MODERATE
+103,"doctor, blurred vision when reading for the last two weeks",MODERATE
+103,blurred vision when reading for the last two weeks. what should i do,MODERATE
+103,blurred vision when reading for the last two weeks. please advise,MODERATE
+103,"hi, blurred vision when reading for the last two weeks and i am worried",MODERATE
+103,hello doctor blurred vision when reading for the last two weeks,MODERATE
+103,i am experiencing blurred vision when reading for the last two weeks,MODERATE
+104,constipation for eight days with bloating,MODERATE
+104,i have constipation for eight days with bloating,MODERATE
+104,"doctor, constipation for eight days with bloating",MODERATE
+104,constipation for eight days with bloating. what should i do,MODERATE
+104,constipation for eight days with bloating. please advise,MODERATE
+104,"hi, constipation for eight days with bloating and i am worried",MODERATE
+104,hello doctor constipation for eight days with bloating,MODERATE
+104,i am experiencing constipation for eight days with bloating,MODERATE
+105,mild fever coming and going for five days,MODERATE
+105,i have mild fever coming and going for five days,MODERATE
+105,"doctor, mild fever coming and going for five days",MODERATE
+105,mild fever coming and going for five days. what should i do,MODERATE
+105,mild fever coming and going for five days. please advise,MODERATE
+105,"hi, mild fever coming and going for five days and i am worried",MODERATE
+105,hello doctor mild fever coming and going for five days,MODERATE
+105,i am experiencing mild fever coming and going for five days,MODERATE
+106,dandruff with an itchy scalp for two months,MODERATE
+106,i have dandruff with an itchy scalp for two months,MODERATE
+106,"doctor, dandruff with an itchy scalp for two months",MODERATE
+106,dandruff with an itchy scalp for two months. what should i do,MODERATE
+106,dandruff with an itchy scalp for two months. please advise,MODERATE
+106,"hi, dandruff with an itchy scalp for two months and i am worried",MODERATE
+106,hello doctor dandruff with an itchy scalp for two months,MODERATE
+106,i am experiencing dandruff with an itchy scalp for two months,MODERATE
+107,numbness and tingling in my fingers for three weeks,MODERATE
+107,i have numbness and tingling in my fingers for three weeks,MODERATE
+107,"doctor, numbness and tingling in my fingers for three weeks",MODERATE
+107,numbness and tingling in my fingers for three weeks. what should i do,MODERATE
+107,numbness and tingling in my fingers for three weeks. please advise,MODERATE
+107,"hi, numbness and tingling in my fingers for three weeks and i am worried",MODERATE
+107,hello doctor numbness and tingling in my fingers for three weeks,MODERATE
+107,i am experiencing numbness and tingling in my fingers for three weeks,MODERATE
+108,"cough with white phlegm for eight days, no fever now",MODERATE
+108,"i have cough with white phlegm for eight days, no fever now",MODERATE
+108,"doctor, cough with white phlegm for eight days, no fever now",MODERATE
+108,"cough with white phlegm for eight days, no fever now. what should i do",MODERATE
+108,"cough with white phlegm for eight days, no fever now. please advise",MODERATE
+108,"hi, cough with white phlegm for eight days, no fever now and i am worried",MODERATE
+108,"hello doctor cough with white phlegm for eight days, no fever now",MODERATE
+108,"i am experiencing cough with white phlegm for eight days, no fever now",MODERATE
+109,ankle pain and mild swelling for six days after twisting it,MODERATE
+109,i have ankle pain and mild swelling for six days after twisting it,MODERATE
+109,"doctor, ankle pain and mild swelling for six days after twisting it",MODERATE
+109,ankle pain and mild swelling for six days after twisting it. what should i do,MODERATE
+109,ankle pain and mild swelling for six days after twisting it. please advise,MODERATE
+109,"hi, ankle pain and mild swelling for six days after twisting it and i am worried",MODERATE
+109,hello doctor ankle pain and mild swelling for six days after twisting it,MODERATE
+109,i am experiencing ankle pain and mild swelling for six days after twisting it,MODERATE
+110,white patches in my mouth for two weeks,MODERATE
+110,i have white patches in my mouth for two weeks,MODERATE
+110,"doctor, white patches in my mouth for two weeks",MODERATE
+110,white patches in my mouth for two weeks. what should i do,MODERATE
+110,white patches in my mouth for two weeks. please advise,MODERATE
+110,"hi, white patches in my mouth for two weeks and i am worried",MODERATE
+110,hello doctor white patches in my mouth for two weeks,MODERATE
+110,i am experiencing white patches in my mouth for two weeks,MODERATE
+111,frequent urination at night for the last three weeks,MODERATE
+111,i have frequent urination at night for the last three weeks,MODERATE
+111,"doctor, frequent urination at night for the last three weeks",MODERATE
+111,frequent urination at night for the last three weeks. what should i do,MODERATE
+111,frequent urination at night for the last three weeks. please advise,MODERATE
+111,"hi, frequent urination at night for the last three weeks and i am worried",MODERATE
+111,hello doctor frequent urination at night for the last three weeks,MODERATE
+111,i am experiencing frequent urination at night for the last three weeks,MODERATE
+112,itchy scaly patches on my elbows for a month,MODERATE
+112,i have itchy scaly patches on my elbows for a month,MODERATE
+112,"doctor, itchy scaly patches on my elbows for a month",MODERATE
+112,itchy scaly patches on my elbows for a month. what should i do,MODERATE
+112,itchy scaly patches on my elbows for a month. please advise,MODERATE
+112,"hi, itchy scaly patches on my elbows for a month and i am worried",MODERATE
+112,hello doctor itchy scaly patches on my elbows for a month,MODERATE
+112,i am experiencing itchy scaly patches on my elbows for a month,MODERATE
+113,shoulder pain that limits lifting my arm for two weeks,MODERATE
+113,i have shoulder pain that limits lifting my arm for two weeks,MODERATE
+113,"doctor, shoulder pain that limits lifting my arm for two weeks",MODERATE
+113,shoulder pain that limits lifting my arm for two weeks. what should i do,MODERATE
+113,shoulder pain that limits lifting my arm for two weeks. please advise,MODERATE
+113,"hi, shoulder pain that limits lifting my arm for two weeks and i am worried",MODERATE
+113,hello doctor shoulder pain that limits lifting my arm for two weeks,MODERATE
+113,i am experiencing shoulder pain that limits lifting my arm for two weeks,MODERATE
+114,stomach bloating and gas almost daily for three weeks,MODERATE
+114,i have stomach bloating and gas almost daily for three weeks,MODERATE
+114,"doctor, stomach bloating and gas almost daily for three weeks",MODERATE
+114,stomach bloating and gas almost daily for three weeks. what should i do,MODERATE
+114,stomach bloating and gas almost daily for three weeks. please advise,MODERATE
+114,"hi, stomach bloating and gas almost daily for three weeks and i am worried",MODERATE
+114,hello doctor stomach bloating and gas almost daily for three weeks,MODERATE
+114,i am experiencing stomach bloating and gas almost daily for three weeks,MODERATE
+115,low mood and loss of interest for the past month,MODERATE
+115,i have low mood and loss of interest for the past month,MODERATE
+115,"doctor, low mood and loss of interest for the past month",MODERATE
+115,low mood and loss of interest for the past month. what should i do,MODERATE
+115,low mood and loss of interest for the past month. please advise,MODERATE
+115,"hi, low mood and loss of interest for the past month and i am worried",MODERATE
+115,hello doctor low mood and loss of interest for the past month,MODERATE
+115,i am experiencing low mood and loss of interest for the past month,MODERATE
+116,ringing in both ears for two weeks,MODERATE
+116,i have ringing in both ears for two weeks,MODERATE
+116,"doctor, ringing in both ears for two weeks",MODERATE
+116,ringing in both ears for two weeks. what should i do,MODERATE
+116,ringing in both ears for two weeks. please advise,MODERATE
+116,"hi, ringing in both ears for two weeks and i am worried",MODERATE
+116,hello doctor ringing in both ears for two weeks,MODERATE
+116,i am experiencing ringing in both ears for two weeks,MODERATE
+117,heel pain when i walk in the morning for three weeks,MODERATE
+117,i have heel pain when i walk in the morning for three weeks,MODERATE
+117,"doctor, heel pain when i walk in the morning for three weeks",MODERATE
+117,heel pain when i walk in the morning for three weeks. what should i do,MODERATE
+117,heel pain when i walk in the morning for three weeks. please advise,MODERATE
+117,"hi, heel pain when i walk in the morning for three weeks and i am worried",MODERATE
+117,hello doctor heel pain when i walk in the morning for three weeks,MODERATE
+117,i am experiencing heel pain when i walk in the morning for three weeks,MODERATE
+118,nosebleeds twice a week for the last month,MODERATE
+118,i have nosebleeds twice a week for the last month,MODERATE
+118,"doctor, nosebleeds twice a week for the last month",MODERATE
+118,nosebleeds twice a week for the last month. what should i do,MODERATE
+118,nosebleeds twice a week for the last month. please advise,MODERATE
+118,"hi, nosebleeds twice a week for the last month and i am worried",MODERATE
+118,hello doctor nosebleeds twice a week for the last month,MODERATE
+118,i am experiencing nosebleeds twice a week for the last month,MODERATE
+119,cracked and peeling skin on my feet for six weeks,MODERATE
+119,i have cracked and peeling skin on my feet for six weeks,MODERATE
+119,"doctor, cracked and peeling skin on my feet for six weeks",MODERATE
+119,cracked and peeling skin on my feet for six weeks. what should i do,MODERATE
+119,cracked and peeling skin on my feet for six weeks. please advise,MODERATE
+119,"hi, cracked and peeling skin on my feet for six weeks and i am worried",MODERATE
+119,hello doctor cracked and peeling skin on my feet for six weeks,MODERATE
+119,i am experiencing cracked and peeling skin on my feet for six weeks,MODERATE
+120,slight fever and a bit of tiredness since this morning,LOW
+120,i have slight fever and a bit of tiredness since this morning,LOW
+120,"doctor, slight fever and a bit of tiredness since this morning",LOW
+120,slight fever and a bit of tiredness since this morning. what should i do,LOW
+120,slight fever and a bit of tiredness since this morning. please advise,LOW
+120,"hi, slight fever and a bit of tiredness since this morning and i am worried",LOW
+120,hello doctor slight fever and a bit of tiredness since this morning,LOW
+120,i am experiencing slight fever and a bit of tiredness since this morning,LOW
+121,runny nose and sneezing since last night,LOW
+121,i have runny nose and sneezing since last night,LOW
+121,"doctor, runny nose and sneezing since last night",LOW
+121,runny nose and sneezing since last night. what should i do,LOW
+121,runny nose and sneezing since last night. please advise,LOW
+121,"hi, runny nose and sneezing since last night and i am worried",LOW
+121,hello doctor runny nose and sneezing since last night,LOW
+121,i am experiencing runny nose and sneezing since last night,LOW
+122,mild sore throat since yesterday,LOW
+122,i have mild sore throat since yesterday,LOW
+122,"doctor, mild sore throat since yesterday",LOW
+122,mild sore throat since yesterday. what should i do,LOW
+122,mild sore throat since yesterday. please advise,LOW
+122,"hi, mild sore throat since yesterday and i am worried",LOW
+122,hello doctor mild sore throat since yesterday,LOW
+122,i am experiencing mild sore throat since yesterday,LOW
+123,mild headache today after skipping lunch,LOW
+123,i have mild headache today after skipping lunch,LOW
+123,"doctor, mild headache today after skipping lunch",LOW
+123,mild headache today after skipping lunch. what should i do,LOW
+123,mild headache today after skipping lunch. please advise,LOW
+123,"hi, mild headache today after skipping lunch and i am worried",LOW
+123,hello doctor mild headache today after skipping lunch,LOW
+123,i am experiencing mild headache today after skipping lunch,LOW
+124,"one loose motion this morning, otherwise fine",LOW
+124,"i have one loose motion this morning, otherwise fine",LOW
+124,"doctor, one loose motion this morning, otherwise fine",LOW
+124,"one loose motion this morning, otherwise fine. what should i do",LOW
+124,"one loose motion this morning, otherwise fine. please advise",LOW
+124,"hi, one loose motion this morning, otherwise fine and i am worried",LOW
+124,"hello doctor one loose motion this morning, otherwise fine",LOW
+124,"i am experiencing one loose motion this morning, otherwise fine",LOW
+125,small mosquito bite that is a little itchy,LOW
+125,i have small mosquito bite that is a little itchy,LOW
+125,"doctor, small mosquito bite that is a little itchy",LOW
+125,small mosquito bite that is a little itchy. what should i do,LOW
+125,small mosquito bite that is a little itchy. please advise,LOW
+125,"hi, small mosquito bite that is a little itchy and i am worried",LOW
+125,hello doctor small mosquito bite that is a little itchy,LOW
+125,i am experiencing small mosquito bite that is a little itchy,LOW
+126,mild body ache after playing football yesterday,LOW
+126,i have mild body ache after playing football yesterday,LOW
+126,"doctor, mild body ache after playing football yesterday",LOW
+126,mild body ache after playing football yesterday. what should i do,LOW
+126,mild body ache after playing football yesterday. please advise,LOW
+126,"hi, mild body ache after playing football yesterday and i am worried",LOW
+126,hello doctor mild body ache after playing football yesterday,LOW
+126,i am experiencing mild body ache after playing football yesterday,LOW
+127,slight stomach discomfort after eating spicy food,LOW
+127,i have slight stomach discomfort after eating spicy food,LOW
+127,"doctor, slight stomach discomfort after eating spicy food",LOW
+127,slight stomach discomfort after eating spicy food. what should i do,LOW
+127,slight stomach discomfort after eating spicy food. please advise,LOW
+127,"hi, slight stomach discomfort after eating spicy food and i am worried",LOW
+127,hello doctor slight stomach discomfort after eating spicy food,LOW
+127,i am experiencing slight stomach discomfort after eating spicy food,LOW
+128,dry lips and mild throat irritation today,LOW
+128,i have dry lips and mild throat irritation today,LOW
+128,"doctor, dry lips and mild throat irritation today",LOW
+128,dry lips and mild throat irritation today. what should i do,LOW
+128,dry lips and mild throat irritation today. please advise,LOW
+128,"hi, dry lips and mild throat irritation today and i am worried",LOW
+128,hello doctor dry lips and mild throat irritation today,LOW
+128,i am experiencing dry lips and mild throat irritation today,LOW
+129,mild sneezing when i clean dusty rooms,LOW
+129,i have mild sneezing when i clean dusty rooms,LOW
+129,"doctor, mild sneezing when i clean dusty rooms",LOW
+129,mild sneezing when i clean dusty rooms. what should i do,LOW
+129,mild sneezing when i clean dusty rooms. please advise,LOW
+129,"hi, mild sneezing when i clean dusty rooms and i am worried",LOW
+129,hello doctor mild sneezing when i clean dusty rooms,LOW
+129,i am experiencing mild sneezing when i clean dusty rooms,LOW
+130,a single pimple on my chin,LOW
+130,i have a single pimple on my chin,LOW
+130,"doctor, a single pimple on my chin",LOW
+130,a single pimple on my chin. what should i do,LOW
+130,a single pimple on my chin. please advise,LOW
+130,"hi, a single pimple on my chin and i am worried",LOW
+130,hello doctor a single pimple on my chin,LOW
+130,i am experiencing a single pimple on my chin,LOW
+131,slight burning eyes after long screen time today,LOW
+131,i have slight burning eyes after long screen time today,LOW
+131,"doctor, slight burning eyes after long screen time today",LOW
+131,slight burning eyes after long screen time today. what should i do,LOW
+131,slight burning eyes after long screen time today. please advise,LOW
+131,"hi, slight burning eyes after long screen time today and i am worried",LOW
+131,hello doctor slight burning eyes after long screen time today,LOW
+131,i am experiencing slight burning eyes after long screen time today,LOW
+132,mild neck stiffness after sleeping in a bad position,LOW
+132,i have mild neck stiffness after sleeping in a bad position,LOW
+132,"doctor, mild neck stiffness after sleeping in a bad position",LOW
+132,mild neck stiffness after sleeping in a bad position. what should i do,LOW
+132,mild neck stiffness after sleeping in a bad position. please advise,LOW
+132,"hi, mild neck stiffness after sleeping in a bad position and i am worried",LOW
+132,hello doctor mild neck stiffness after sleeping in a bad position,LOW
+132,i am experiencing mild neck stiffness after sleeping in a bad position,LOW
+133,small paper cut on my finger,LOW
+133,i have small paper cut on my finger,LOW
+133,"doctor, small paper cut on my finger",LOW
+133,small paper cut on my finger. what should i do,LOW
+133,small paper cut on my finger. please advise,LOW
+133,"hi, small paper cut on my finger and i am worried",LOW
+133,hello doctor small paper cut on my finger,LOW
+133,i am experiencing small paper cut on my finger,LOW
+134,hiccups on and off this afternoon,LOW
+134,i have hiccups on and off this afternoon,LOW
+134,"doctor, hiccups on and off this afternoon",LOW
+134,hiccups on and off this afternoon. what should i do,LOW
+134,hiccups on and off this afternoon. please advise,LOW
+134,"hi, hiccups on and off this afternoon and i am worried",LOW
+134,hello doctor hiccups on and off this afternoon,LOW
+134,i am experiencing hiccups on and off this afternoon,LOW
+135,mild gas and burping since lunch,LOW
+135,i have mild gas and burping since lunch,LOW
+135,"doctor, mild gas and burping since lunch",LOW
+135,mild gas and burping since lunch. what should i do,LOW
+135,mild gas and burping since lunch. please advise,LOW
+135,"hi, mild gas and burping since lunch and i am worried",LOW
+135,hello doctor mild gas and burping since lunch,LOW
+135,i am experiencing mild gas and burping since lunch,LOW
+136,one bruise on my knee after bumping a table,LOW
+136,i have one bruise on my knee after bumping a table,LOW
+136,"doctor, one bruise on my knee after bumping a table",LOW
+136,one bruise on my knee after bumping a table. what should i do,LOW
+136,one bruise on my knee after bumping a table. please advise,LOW
+136,"hi, one bruise on my knee after bumping a table and i am worried",LOW
+136,hello doctor one bruise on my knee after bumping a table,LOW
+136,i am experiencing one bruise on my knee after bumping a table,LOW
+137,"slight cough for one day, no fever",LOW
+137,"i have slight cough for one day, no fever",LOW
+137,"doctor, slight cough for one day, no fever",LOW
+137,"slight cough for one day, no fever. what should i do",LOW
+137,"slight cough for one day, no fever. please advise",LOW
+137,"hi, slight cough for one day, no fever and i am worried",LOW
+137,"hello doctor slight cough for one day, no fever",LOW
+137,"i am experiencing slight cough for one day, no fever",LOW
+138,mild soreness in my shoulder after gym today,LOW
+138,i have mild soreness in my shoulder after gym today,LOW
+138,"doctor, mild soreness in my shoulder after gym today",LOW
+138,mild soreness in my shoulder after gym today. what should i do,LOW
+138,mild soreness in my shoulder after gym today. please advise,LOW
+138,"hi, mild soreness in my shoulder after gym today and i am worried",LOW
+138,hello doctor mild soreness in my shoulder after gym today,LOW
+138,i am experiencing mild soreness in my shoulder after gym today,LOW
+139,i feel slightly tired today after a late night,LOW
+139,i have i feel slightly tired today after a late night,LOW
+139,"doctor, i feel slightly tired today after a late night",LOW
+139,i feel slightly tired today after a late night. what should i do,LOW
+139,i feel slightly tired today after a late night. please advise,LOW
+139,"hi, i feel slightly tired today after a late night and i am worried",LOW
+139,hello doctor i feel slightly tired today after a late night,LOW
+139,i am experiencing i feel slightly tired today after a late night,LOW
+140,mild itching on my scalp today,LOW
+140,i have mild itching on my scalp today,LOW
+140,"doctor, mild itching on my scalp today",LOW
+140,mild itching on my scalp today. what should i do,LOW
+140,mild itching on my scalp today. please advise,LOW
+140,"hi, mild itching on my scalp today and i am worried",LOW
+140,hello doctor mild itching on my scalp today,LOW
+140,i am experiencing mild itching on my scalp today,LOW
+141,small blister on my heel from new shoes,LOW
+141,i have small blister on my heel from new shoes,LOW
+141,"doctor, small blister on my heel from new shoes",LOW
+141,small blister on my heel from new shoes. what should i do,LOW
+141,small blister on my heel from new shoes. please advise,LOW
+141,"hi, small blister on my heel from new shoes and i am worried",LOW
+141,hello doctor small blister on my heel from new shoes,LOW
+141,i am experiencing small blister on my heel from new shoes,LOW
+142,light period cramps today,LOW
+142,i have light period cramps today,LOW
+142,"doctor, light period cramps today",LOW
+142,light period cramps today. what should i do,LOW
+142,light period cramps today. please advise,LOW
+142,"hi, light period cramps today and i am worried",LOW
+142,hello doctor light period cramps today,LOW
+142,i am experiencing light period cramps today,LOW
+143,mild nasal block in the morning only,LOW
+143,i have mild nasal block in the morning only,LOW
+143,"doctor, mild nasal block in the morning only",LOW
+143,mild nasal block in the morning only. what should i do,LOW
+143,mild nasal block in the morning only. please advise,LOW
+143,"hi, mild nasal block in the morning only and i am worried",LOW
+143,hello doctor mild nasal block in the morning only,LOW
+143,i am experiencing mild nasal block in the morning only,LOW
+144,slightly watery eyes since morning,LOW
+144,i have slightly watery eyes since morning,LOW
+144,"doctor, slightly watery eyes since morning",LOW
+144,slightly watery eyes since morning. what should i do,LOW
+144,slightly watery eyes since morning. please advise,LOW
+144,"hi, slightly watery eyes since morning and i am worried",LOW
+144,hello doctor slightly watery eyes since morning,LOW
+144,i am experiencing slightly watery eyes since morning,LOW
+145,mild ringing in my ear for a few minutes today,LOW
+145,i have mild ringing in my ear for a few minutes today,LOW
+145,"doctor, mild ringing in my ear for a few minutes today",LOW
+145,mild ringing in my ear for a few minutes today. what should i do,LOW
+145,mild ringing in my ear for a few minutes today. please advise,LOW
+145,"hi, mild ringing in my ear for a few minutes today and i am worried",LOW
+145,hello doctor mild ringing in my ear for a few minutes today,LOW
+145,i am experiencing mild ringing in my ear for a few minutes today,LOW
+146,minor sunburn on my nose from this afternoon,LOW
+146,i have minor sunburn on my nose from this afternoon,LOW
+146,"doctor, minor sunburn on my nose from this afternoon",LOW
+146,minor sunburn on my nose from this afternoon. what should i do,LOW
+146,minor sunburn on my nose from this afternoon. please advise,LOW
+146,"hi, minor sunburn on my nose from this afternoon and i am worried",LOW
+146,hello doctor minor sunburn on my nose from this afternoon,LOW
+146,i am experiencing minor sunburn on my nose from this afternoon,LOW
+147,mild toe pain after stubbing it just now,LOW
+147,i have mild toe pain after stubbing it just now,LOW
+147,"doctor, mild toe pain after stubbing it just now",LOW
+147,mild toe pain after stubbing it just now. what should i do,LOW
+147,mild toe pain after stubbing it just now. please advise,LOW
+147,"hi, mild toe pain after stubbing it just now and i am worried",LOW
+147,hello doctor mild toe pain after stubbing it just now,LOW
+147,i am experiencing mild toe pain after stubbing it just now,LOW
+148,slight sneezing and itchy nose this morning only,LOW
+148,i have slight sneezing and itchy nose this morning only,LOW
+148,"doctor, slight sneezing and itchy nose this morning only",LOW
+148,slight sneezing and itchy nose this morning only. what should i do,LOW
+148,slight sneezing and itchy nose this morning only. please advise,LOW
+148,"hi, slight sneezing and itchy nose this morning only and i am worried",LOW
+148,hello doctor slight sneezing and itchy nose this morning only,LOW
+148,i am experiencing slight sneezing and itchy nose this morning only,LOW
+149,mild acidity after a heavy dinner last night,LOW
+149,i have mild acidity after a heavy dinner last night,LOW
+149,"doctor, mild acidity after a heavy dinner last night",LOW
+149,mild acidity after a heavy dinner last night. what should i do,LOW
+149,mild acidity after a heavy dinner last night. please advise,LOW
+149,"hi, mild acidity after a heavy dinner last night and i am worried",LOW
+149,hello doctor mild acidity after a heavy dinner last night,LOW
+149,i am experiencing mild acidity after a heavy dinner last night,LOW
+150,tired eyes after studying all evening,LOW
+150,i have tired eyes after studying all evening,LOW
+150,"doctor, tired eyes after studying all evening",LOW
+150,tired eyes after studying all evening. what should i do,LOW
+150,tired eyes after studying all evening. please advise,LOW
+150,"hi, tired eyes after studying all evening and i am worried",LOW
+150,hello doctor tired eyes after studying all evening,LOW
+150,i am experiencing tired eyes after studying all evening,LOW
+151,small red patch where my watch strap rubs,LOW
+151,i have small red patch where my watch strap rubs,LOW
+151,"doctor, small red patch where my watch strap rubs",LOW
+151,small red patch where my watch strap rubs. what should i do,LOW
+151,small red patch where my watch strap rubs. please advise,LOW
+151,"hi, small red patch where my watch strap rubs and i am worried",LOW
+151,hello doctor small red patch where my watch strap rubs,LOW
+151,i am experiencing small red patch where my watch strap rubs,LOW
+152,mild jaw ache after chewing gum today,LOW
+152,i have mild jaw ache after chewing gum today,LOW
+152,"doctor, mild jaw ache after chewing gum today",LOW
+152,mild jaw ache after chewing gum today. what should i do,LOW
+152,mild jaw ache after chewing gum today. please advise,LOW
+152,"hi, mild jaw ache after chewing gum today and i am worried",LOW
+152,hello doctor mild jaw ache after chewing gum today,LOW
+152,i am experiencing mild jaw ache after chewing gum today,LOW
+153,slight dizziness once when i stood up quickly today,LOW
+153,i have slight dizziness once when i stood up quickly today,LOW
+153,"doctor, slight dizziness once when i stood up quickly today",LOW
+153,slight dizziness once when i stood up quickly today. what should i do,LOW
+153,slight dizziness once when i stood up quickly today. please advise,LOW
+153,"hi, slight dizziness once when i stood up quickly today and i am worried",LOW
+153,hello doctor slight dizziness once when i stood up quickly today,LOW
+153,i am experiencing slight dizziness once when i stood up quickly today,LOW
+154,mild leg cramp last night while sleeping,LOW
+154,i have mild leg cramp last night while sleeping,LOW
+154,"doctor, mild leg cramp last night while sleeping",LOW
+154,mild leg cramp last night while sleeping. what should i do,LOW
+154,mild leg cramp last night while sleeping. please advise,LOW
+154,"hi, mild leg cramp last night while sleeping and i am worried",LOW
+154,hello doctor mild leg cramp last night while sleeping,LOW
+154,i am experiencing mild leg cramp last night while sleeping,LOW
+155,itchy skin after wearing a new woollen sweater today,LOW
+155,i have itchy skin after wearing a new woollen sweater today,LOW
+155,"doctor, itchy skin after wearing a new woollen sweater today",LOW
+155,itchy skin after wearing a new woollen sweater today. what should i do,LOW
+155,itchy skin after wearing a new woollen sweater today. please advise,LOW
+155,"hi, itchy skin after wearing a new woollen sweater today and i am worried",LOW
+155,hello doctor itchy skin after wearing a new woollen sweater today,LOW
+155,i am experiencing itchy skin after wearing a new woollen sweater today,LOW
+156,mild throat dryness after singing loudly yesterday,LOW
+156,i have mild throat dryness after singing loudly yesterday,LOW
+156,"doctor, mild throat dryness after singing loudly yesterday",LOW
+156,mild throat dryness after singing loudly yesterday. what should i do,LOW
+156,mild throat dryness after singing loudly yesterday. please advise,LOW
+156,"hi, mild throat dryness after singing loudly yesterday and i am worried",LOW
+156,hello doctor mild throat dryness after singing loudly yesterday,LOW
+156,i am experiencing mild throat dryness after singing loudly yesterday,LOW
+157,one small mouth ulcer since yesterday,LOW
+157,i have one small mouth ulcer since yesterday,LOW
+157,"doctor, one small mouth ulcer since yesterday",LOW
+157,one small mouth ulcer since yesterday. what should i do,LOW
+157,one small mouth ulcer since yesterday. please advise,LOW
+157,"hi, one small mouth ulcer since yesterday and i am worried",LOW
+157,hello doctor one small mouth ulcer since yesterday,LOW
+157,i am experiencing one small mouth ulcer since yesterday,LOW
+158,slight wrist ache after typing all day,LOW
+158,i have slight wrist ache after typing all day,LOW
+158,"doctor, slight wrist ache after typing all day",LOW
+158,slight wrist ache after typing all day. what should i do,LOW
+158,slight wrist ache after typing all day. please advise,LOW
+158,"hi, slight wrist ache after typing all day and i am worried",LOW
+158,hello doctor slight wrist ache after typing all day,LOW
+158,i am experiencing slight wrist ache after typing all day,LOW
+159,mild forehead warmth but thermometer shows normal,LOW
+159,i have mild forehead warmth but thermometer shows normal,LOW
+159,"doctor, mild forehead warmth but thermometer shows normal",LOW
+159,mild forehead warmth but thermometer shows normal. what should i do,LOW
+159,mild forehead warmth but thermometer shows normal. please advise,LOW
+159,"hi, mild forehead warmth but thermometer shows normal and i am worried",LOW
+159,hello doctor mild forehead warmth but thermometer shows normal,LOW
+159,i am experiencing mild forehead warmth but thermometer shows normal,LOW

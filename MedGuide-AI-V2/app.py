@@ -1,4 +1,6 @@
+import json
 from datetime import datetime
+from pathlib import Path
 
 import streamlit as st
 
@@ -408,7 +410,41 @@ elif page == "📜 History":
 
 elif page == "📊 Evaluation":
     st.markdown("## 📊 Evaluation")
-    st.caption("Evaluate the risk-classification component using predefined test cases.")
+
+    st.markdown("### Measured results")
+    st.caption(
+        "Produced by the scripts in `ml/`: train_triage.py, train_intent.py, "
+        "eval_retrieval.py and eval_pipeline.py. Re-run them to refresh these numbers."
+    )
+
+    RESULTS_DIR = Path(__file__).resolve().parent / "results"
+    RESULT_FILES = {
+        "Triage classifier vs rules": "triage_metrics.json",
+        "Question-intent classifier": "intent_metrics.json",
+        "MedQuAD retrieval": "retrieval_metrics.json",
+        "End-to-end pipeline": "pipeline_metrics.json",
+    }
+
+    found_any = False
+    for title, filename in RESULT_FILES.items():
+        path = RESULTS_DIR / filename
+        if not path.exists():
+            continue
+        found_any = True
+        with st.expander(f"{title}  ({filename})"):
+            data = json.loads(path.read_text(encoding="utf-8"))
+            data.pop("cases_detail", None)
+            st.json(data, expanded=False)
+
+    if not found_any:
+        st.info(
+            "No measured results yet. Run `python -m ml.train_triage`, "
+            "`python -m ml.train_intent`, `python -m ml.eval_retrieval` and "
+            "`python -m ml.eval_pipeline` first."
+        )
+
+    st.markdown("### Live smoke test")
+    st.caption("Runs the full pipeline on a few predefined cases.")
 
     TEST_CASES = [
         {
@@ -520,8 +556,11 @@ symptoms may be, why they may have happened, what can be done at home, and when
 a doctor should be consulted.
 
 The retrieved medical data is used internally to support the answer and is not
-displayed to the user. Risk screening is rule based so it is fast and
-reproducible, and only the final explanation uses the language model.
+displayed to the user. Triage combines a trained classifier with a deterministic
+red-flag keyword screen that can escalate a case to EMERGENCY but never lower it,
+and only the final explanation uses the language model.
+
+Measured results for every component are on the Evaluation page.
 
 This system is for academic demonstration only and is not a replacement for
 professional medical diagnosis or treatment.

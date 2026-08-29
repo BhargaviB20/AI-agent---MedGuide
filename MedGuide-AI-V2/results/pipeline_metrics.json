@@ -1,0 +1,221 @@
+{
+  "cases": 32,
+  "llm_enabled": false,
+  "test_set": "held-out seeds of data/triage_dataset.csv (GroupShuffleSplit, seed 42)",
+  "triage_accuracy": 0.6875,
+  "emergency_cases": 10,
+  "critical_safety_violation_rate": 0.1,
+  "immediate_care_advice_rate": 1.0,
+  "structure_compliance": 0.875,
+  "groundedness_mean": 0.4017,
+  "gemini_answer_rate": 0.0,
+  "latency_seconds": {
+    "mean": 0.058,
+    "p50": 0.02,
+    "p95": 0.03,
+    "max": 1.2
+  },
+  "agent_latency_seconds_mean": {
+    "Patient Profile Agent": 0.0,
+    "Symptom Analysis Agent": 0.0,
+    "Medical Knowledge Agent": 0.0559,
+    "Risk Assessment Agent": 0.0106,
+    "Recommendation Agent": 0.0,
+    "Hospital Navigation Agent": 0.0,
+    "Final Response Agent": 0.0
+  },
+  "cases_detail": [
+    {
+      "symptoms": "my child is unresponsive and floppy",
+      "expected": "EMERGENCY",
+      "predicted": "EMERGENCY",
+      "seconds": 0.0
+    },
+    {
+      "symptoms": "i took an overdose of tablets",
+      "expected": "EMERGENCY",
+      "predicted": "EMERGENCY",
+      "seconds": 1.2
+    },
+    {
+      "symptoms": "high fever with a stiff neck and i cannot tolerate light",
+      "expected": "EMERGENCY",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "swollen tongue and throat closing after eating peanuts",
+      "expected": "EMERGENCY",
+      "predicted": "LOW",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "fainted and hit my head, vomiting since then",
+      "expected": "EMERGENCY",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "i am pregnant with heavy bleeding and severe belly pain",
+      "expected": "EMERGENCY",
+      "predicted": "EMERGENCY",
+      "seconds": 0.0
+    },
+    {
+      "symptoms": "my newborn baby is not breathing normally and is grunting",
+      "expected": "EMERGENCY",
+      "predicted": "EMERGENCY",
+      "seconds": 0.0
+    },
+    {
+      "symptoms": "chest pain that started while resting and is not going away",
+      "expected": "EMERGENCY",
+      "predicted": "EMERGENCY",
+      "seconds": 0.0
+    },
+    {
+      "symptoms": "i am short of breath at rest and cannot lie flat",
+      "expected": "EMERGENCY",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "large amount of blood in my stool just now",
+      "expected": "EMERGENCY",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "painful swollen red calf, it feels warm",
+      "expected": "HIGH",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "i am pregnant and have not felt the baby move since morning",
+      "expected": "HIGH",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "eye is red and painful with blurred vision",
+      "expected": "HIGH",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "bad headache with vomiting and my vision is doubled",
+      "expected": "HIGH",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "severe vomiting for a day and i have not passed urine since morning",
+      "expected": "HIGH",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "i am 66 and had a brief episode where i could not speak",
+      "expected": "HIGH",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "headache almost every day for two weeks",
+      "expected": "MODERATE",
+      "predicted": "MODERATE",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "mouth ulcers that keep coming back for a month",
+      "expected": "MODERATE",
+      "predicted": "MODERATE",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "cannot sleep properly for three weeks and feel anxious",
+      "expected": "MODERATE",
+      "predicted": "MODERATE",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "weight loss of four kilos over two months without trying",
+      "expected": "MODERATE",
+      "predicted": "EMERGENCY",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "persistent tiredness for a month even after resting",
+      "expected": "MODERATE",
+      "predicted": "MODERATE",
+      "seconds": 0.02
+    },
+    {
+      "symptoms": "recurring pimples with painful boils for six weeks",
+      "expected": "MODERATE",
+      "predicted": "MODERATE",
+      "seconds": 0.03
+    },
+    {
+      "symptoms": "constipation for eight days with bloating",
+      "expected": "MODERATE",
+      "predicted": "MODERATE",
+      "seconds": 0.03
+    },
+    {
+      "symptoms": "mild fever coming and going for five days",
+      "expected": "MODERATE",
+      "predicted": "MODERATE",
+      "seconds": 0.03
+    },
+    {
+      "symptoms": "cough with white phlegm for eight days, no fever now",
+      "expected": "MODERATE",
+      "predicted": "HIGH",
+      "seconds": 0.03
+    },
+    {
+      "symptoms": "dry lips and mild throat irritation today",
+      "expected": "LOW",
+      "predicted": "LOW",
+      "seconds": 0.03
+    },
+    {
+      "symptoms": "slight burning eyes after long screen time today",
+      "expected": "LOW",
+      "predicted": "LOW",
+      "seconds": 0.03
+    },
+    {
+      "symptoms": "one bruise on my knee after bumping a table",
+      "expected": "LOW",
+      "predicted": "LOW",
+      "seconds": 0.03
+    },
+    {
+      "symptoms": "small blister on my heel from new shoes",
+      "expected": "LOW",
+      "predicted": "EMERGENCY",
+      "seconds": 0.03
+    },
+    {
+      "symptoms": "light period cramps today",
+      "expected": "LOW",
+      "predicted": "LOW",
+      "seconds": 0.03
+    },
+    {
+      "symptoms": "mild toe pain after stubbing it just now",
+      "expected": "LOW",
+      "predicted": "LOW",
+      "seconds": 0.03
+    },
+    {
+      "symptoms": "small red patch where my watch strap rubs",
+      "expected": "LOW",
+      "predicted": "LOW",
+      "seconds": 0.03
+    }
+  ]
+}
