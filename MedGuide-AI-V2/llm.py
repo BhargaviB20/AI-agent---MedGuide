@@ -14,7 +14,7 @@ PLACEHOLDER_KEYS = {"", "your_gemini_api_key", "your_key_here", "changeme"}
 MODEL_CANDIDATES = [
     "gemini-flash-lite-latest",
     "gemini-flash-latest",
-    "gemini-2.5-flash-lite",
+    "gemini-3.5-flash-lite",
 ]
 
 

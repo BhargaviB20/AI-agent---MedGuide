@@ -334,10 +334,21 @@ if page == "💬 Chat":
                 )
                 st.markdown(result.get("final_response", "Unable to generate a response."))
 
-                if result.get("query_type") != "knowledge_question":
+                if result.get("query_type") in ("symptom_report", "emergency"):
                     st.markdown("**Suggested care pathway**")
                     st.write(result.get("recommendation", ""))
                     st.write(result.get("hospital_navigation", ""))
+
+            decision = result.get("planner_decision") or {}
+            if decision:
+                overrides = decision.get("overrides") or []
+                st.caption(
+                    "Operation chosen: {} (confidence {:.2f}){}".format(
+                        decision.get("operation", "-"),
+                        decision.get("confidence", 0.0),
+                        "; safety override: " + ", ".join(overrides) if overrides else "",
+                    )
+                )
 
             st.caption(
                 "AI-assisted health guidance. This does not replace professional medical advice."
@@ -398,13 +409,16 @@ elif page == "📊 Evaluation":
 
     st.markdown("### Measured results")
     st.caption(
-        "Produced by the scripts in `ml/`: train_triage.py, train_intent.py, "
-        "eval_retrieval.py, eval_pipeline.py and eval_knowledge_qa.py. "
+        "Produced by the scripts in `ml/`: train_planner.py, train_triage.py, "
+        "train_intent.py, eval_planner.py, eval_retrieval.py, "
+        "eval_pipeline.py and eval_knowledge_qa.py. "
         "Re-run them to refresh these numbers."
     )
 
     RESULTS_DIR = Path(__file__).resolve().parent / "results"
     RESULT_FILES = {
+        "Operation selection: policies compared": "planner_eval.json",
+        "Operation-selection classifier": "planner_metrics.json",
         "Triage classifier vs rules": "triage_metrics.json",
         "Question-intent classifier": "intent_metrics.json",
         "MedQuAD retrieval": "retrieval_metrics.json",
@@ -421,12 +435,14 @@ elif page == "📊 Evaluation":
         with st.expander(f"{title}  ({filename})"):
             data = json.loads(path.read_text(encoding="utf-8"))
             data.pop("cases_detail", None)
+            data.pop("test_index", None)
             st.json(data, expanded=False)
 
     if not found_any:
         st.info(
-            "No measured results yet. Run `python -m ml.train_triage`, "
-            "`python -m ml.train_intent`, `python -m ml.eval_retrieval` and "
+            "No measured results yet. Run `python -m ml.train_planner`, "
+            "`python -m ml.train_triage`, `python -m ml.train_intent`, "
+            "`python -m ml.eval_planner`, `python -m ml.eval_retrieval` and "
             "`python -m ml.eval_pipeline` first."
         )
 

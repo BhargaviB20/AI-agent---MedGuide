@@ -1,0 +1,137 @@
+{
+  "model": "TF-IDF (word 1-2 + char 3-5) + Logistic Regression",
+  "dataset": "data/plan_dataset.csv",
+  "operations": [
+    "EMERGENCY_ESCALATE",
+    "TRIAGE_SYMPTOMS",
+    "RETRIEVE_KNOWLEDGE",
+    "COMPARE_CONDITIONS",
+    "MEDICATION_SAFETY",
+    "OUT_OF_SCOPE"
+  ],
+  "train_size": 2457,
+  "test_size": 583,
+  "train_groups": 712,
+  "test_groups": 178,
+  "train_seconds": 0.49,
+  "split": "GroupShuffleSplit 80/20 over source groups",
+  "trained_planner": {
+    "accuracy": 0.8353,
+    "precision_macro": 0.844,
+    "recall_macro": 0.8038,
+    "f1_macro": 0.8106,
+    "per_class": {
+      "COMPARE_CONDITIONS": {
+        "precision": 0.9863013698630136,
+        "recall": 1.0,
+        "f1-score": 0.993103448275862,
+        "support": 144.0
+      },
+      "EMERGENCY_ESCALATE": {
+        "precision": 0.4666666666666667,
+        "recall": 0.23863636363636365,
+        "f1-score": 0.3157894736842105,
+        "support": 88.0
+      },
+      "MEDICATION_SAFETY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 60.0
+      },
+      "OUT_OF_SCOPE": {
+        "precision": 1.0,
+        "recall": 0.725,
+        "f1-score": 0.8405797101449275,
+        "support": 40.0
+      },
+      "RETRIEVE_KNOWLEDGE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 123.0
+      },
+      "TRIAGE_SYMPTOMS": {
+        "precision": 0.6111111111111112,
+        "recall": 0.859375,
+        "f1-score": 0.7142857142857143,
+        "support": 128.0
+      },
+      "accuracy": 0.8353344768439108,
+      "macro avg": {
+        "precision": 0.8440131912734653,
+        "recall": 0.8038352272727273,
+        "f1-score": 0.810626391065119,
+        "support": 583.0
+      },
+      "weighted avg": {
+        "precision": 0.8307311940808968,
+        "recall": 0.8353344768439108,
+        "f1-score": 0.8213518526077243,
+        "support": 583.0
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "EMERGENCY_ESCALATE",
+        "TRIAGE_SYMPTOMS",
+        "RETRIEVE_KNOWLEDGE",
+        "COMPARE_CONDITIONS",
+        "MEDICATION_SAFETY",
+        "OUT_OF_SCOPE"
+      ],
+      "matrix": [
+        [
+          21,
+          67,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          18,
+          110,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          123,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          144,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          60,
+          0
+        ],
+        [
+          6,
+          3,
+          0,
+          2,
+          0,
+          29
+        ]
+      ]
+    }
+  },
+  "cv5_grouped_accuracy_mean": 0.9178,
+  "cv5_grouped_accuracy_std": 0.0138
+}

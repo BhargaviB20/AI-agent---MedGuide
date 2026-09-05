@@ -10,6 +10,7 @@ from pathlib import Path
 MODEL_DIR = Path(__file__).resolve().parent.parent / "models"
 INTENT_MODEL = MODEL_DIR / "intent_classifier.joblib"
 TRIAGE_MODEL = MODEL_DIR / "triage_classifier.joblib"
+PLANNER_MODEL = MODEL_DIR / "planner_classifier.joblib"
 
 # Most urgent first. Used to merge the rule-based screen with the classifier.
 URGENCY_ORDER = ["EMERGENCY", "HIGH", "MODERATE", "LOW"]
@@ -41,6 +42,20 @@ def predict_intent(text: str):
     if hasattr(model, "predict_proba"):
         confidence = float(max(model.predict_proba([text])[0]))
     return intent, confidence
+
+
+def predict_operation(text: str):
+    """Returns (operation, confidence) for the operation-selection agent, or
+    (None, 0.0) if the planner model is unavailable."""
+    model = _load(str(PLANNER_MODEL))
+    if model is None or not (text or "").strip():
+        return None, 0.0
+
+    operation = str(model.predict([text])[0])
+    confidence = 0.0
+    if hasattr(model, "predict_proba"):
+        confidence = float(max(model.predict_proba([text])[0]))
+    return operation, confidence
 
 
 def predict_triage(text: str):

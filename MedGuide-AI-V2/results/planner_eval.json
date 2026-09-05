@@ -1,0 +1,315 @@
+{
+  "operations": [
+    "EMERGENCY_ESCALATE",
+    "TRIAGE_SYMPTOMS",
+    "RETRIEVE_KNOWLEDGE",
+    "COMPARE_CONDITIONS",
+    "MEDICATION_SAFETY",
+    "OUT_OF_SCOPE"
+  ],
+  "test_size": 583,
+  "split_source": "results/planner_test_split.json (grouped 80/20)",
+  "policies": {
+    "fixed_pipeline": {
+      "accuracy": 0.2196,
+      "f1_macro": 0.06,
+      "unsafe_routing_rate": 1.0,
+      "unsafe_advice_rate": 1.0,
+      "mean_decision_seconds": 0.0,
+      "per_class": {
+        "COMPARE_CONDITIONS": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 144.0
+        },
+        "EMERGENCY_ESCALATE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 88.0
+        },
+        "MEDICATION_SAFETY": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 60.0
+        },
+        "OUT_OF_SCOPE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 40.0
+        },
+        "RETRIEVE_KNOWLEDGE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 123.0
+        },
+        "TRIAGE_SYMPTOMS": {
+          "precision": 0.2195540308747856,
+          "recall": 1.0,
+          "f1-score": 0.360056258790436,
+          "support": 128.0
+        },
+        "accuracy": 0.2195540308747856,
+        "macro avg": {
+          "precision": 0.03659233847913093,
+          "recall": 0.16666666666666666,
+          "f1-score": 0.06000937646507267,
+          "support": 583.0
+        },
+        "weighted avg": {
+          "precision": 0.0482039724733663,
+          "recall": 0.2195540308747856,
+          "f1-score": 0.07905180295913518,
+          "support": 583.0
+        }
+      }
+    },
+    "rule_policy": {
+      "accuracy": 0.8422,
+      "f1_macro": 0.8204,
+      "unsafe_routing_rate": 0.7273,
+      "unsafe_advice_rate": 0.0,
+      "mean_decision_seconds": 2e-05,
+      "per_class": {
+        "COMPARE_CONDITIONS": {
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1-score": 0.9333333333333333,
+          "support": 144.0
+        },
+        "EMERGENCY_ESCALATE": {
+          "precision": 1.0,
+          "recall": 0.2727272727272727,
+          "f1-score": 0.42857142857142855,
+          "support": 88.0
+        },
+        "MEDICATION_SAFETY": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 60.0
+        },
+        "OUT_OF_SCOPE": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1-score": 0.8571428571428571,
+          "support": 40.0
+        },
+        "RETRIEVE_KNOWLEDGE": {
+          "precision": 0.8482758620689655,
+          "recall": 1.0,
+          "f1-score": 0.917910447761194,
+          "support": 123.0
+        },
+        "TRIAGE_SYMPTOMS": {
+          "precision": 0.6464646464646465,
+          "recall": 1.0,
+          "f1-score": 0.7852760736196319,
+          "support": 128.0
+        },
+        "accuracy": 0.8421955403087479,
+        "macro avg": {
+          "precision": 0.915790084755602,
+          "recall": 0.8162878787878788,
+          "f1-score": 0.8203723567380742,
+          "support": 583.0
+        },
+        "weighted avg": {
+          "precision": 0.8903694781851759,
+          "recall": 0.8421955403087479,
+          "f1-score": 0.823015990562504,
+          "support": 583.0
+        }
+      }
+    },
+    "trained_planner": {
+      "accuracy": 0.837,
+      "f1_macro": 0.8152,
+      "unsafe_routing_rate": 0.7841,
+      "unsafe_advice_rate": 0.0,
+      "mean_decision_seconds": 0.0021,
+      "per_class": {
+        "COMPARE_CONDITIONS": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 144.0
+        },
+        "EMERGENCY_ESCALATE": {
+          "precision": 0.4418604651162791,
+          "recall": 0.2159090909090909,
+          "f1-score": 0.2900763358778626,
+          "support": 88.0
+        },
+        "MEDICATION_SAFETY": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 60.0
+        },
+        "OUT_OF_SCOPE": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1-score": 0.8888888888888888,
+          "support": 40.0
+        },
+        "RETRIEVE_KNOWLEDGE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 123.0
+        },
+        "TRIAGE_SYMPTOMS": {
+          "precision": 0.6077348066298343,
+          "recall": 0.859375,
+          "f1-score": 0.7119741100323624,
+          "support": 128.0
+        },
+        "accuracy": 0.8370497427101201,
+        "macro avg": {
+          "precision": 0.8415992119576856,
+          "recall": 0.8125473484848484,
+          "f1-score": 0.8151565557998522,
+          "support": 583.0
+        },
+        "weighted avg": {
+          "precision": 0.8296291186601225,
+          "recall": 0.8370497427101201,
+          "f1-score": 0.8219810620873925,
+          "support": 583.0
+        }
+      }
+    },
+    "deployed_policy": {
+      "accuracy": 0.8628,
+      "f1_macro": 0.8505,
+      "unsafe_routing_rate": 0.6136,
+      "unsafe_advice_rate": 0.0,
+      "mean_decision_seconds": 0.00196,
+      "per_class": {
+        "COMPARE_CONDITIONS": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 144.0
+        },
+        "EMERGENCY_ESCALATE": {
+          "precision": 0.5862068965517241,
+          "recall": 0.38636363636363635,
+          "f1-score": 0.4657534246575342,
+          "support": 88.0
+        },
+        "MEDICATION_SAFETY": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 60.0
+        },
+        "OUT_OF_SCOPE": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1-score": 0.8888888888888888,
+          "support": 40.0
+        },
+        "RETRIEVE_KNOWLEDGE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 123.0
+        },
+        "TRIAGE_SYMPTOMS": {
+          "precision": 0.6626506024096386,
+          "recall": 0.859375,
+          "f1-score": 0.7482993197278912,
+          "support": 128.0
+        },
+        "accuracy": 0.8627787307032591,
+        "macro avg": {
+          "precision": 0.8748095831602272,
+          "recall": 0.8409564393939394,
+          "f1-score": 0.8504902722123857,
+          "support": 583.0
+        },
+        "weighted avg": {
+          "precision": 0.8634742435763044,
+          "recall": 0.8627787307032591,
+          "f1-score": 0.8564737047179908,
+          "support": 583.0
+        }
+      }
+    }
+  },
+  "system_safety": {
+    "emergency_queries": 88,
+    "escalated_by_planner": 34,
+    "escalated_by_triage_stage": 54,
+    "escalated_overall_rate": 1.0,
+    "missed_rate": 0.0,
+    "missed_examples": []
+  },
+  "llm_planner": {
+    "accuracy": 0.8764,
+    "f1_macro": 0.8844,
+    "unsafe_routing_rate": 0.0,
+    "unsafe_advice_rate": 0.0,
+    "mean_decision_seconds": 6.96322,
+    "per_class": {
+      "COMPARE_CONDITIONS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 22.0
+      },
+      "EMERGENCY_ESCALATE": {
+        "precision": 0.5217391304347826,
+        "recall": 1.0,
+        "f1-score": 0.6857142857142857,
+        "support": 12.0
+      },
+      "MEDICATION_SAFETY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 3.0
+      },
+      "OUT_OF_SCOPE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "RETRIEVE_KNOWLEDGE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 22.0
+      },
+      "TRIAGE_SYMPTOMS": {
+        "precision": 1.0,
+        "recall": 0.45,
+        "f1-score": 0.6206896551724138,
+        "support": 20.0
+      },
+      "accuracy": 0.8764044943820225,
+      "macro avg": {
+        "precision": 0.9202898550724639,
+        "recall": 0.9083333333333333,
+        "f1-score": 0.8844006568144499,
+        "support": 89.0
+      },
+      "weighted avg": {
+        "precision": 0.9355153883732291,
+        "recall": 0.8764044943820225,
+        "f1-score": 0.8723861183373,
+        "support": 89.0
+      }
+    },
+    "sample_size": 90,
+    "answered": 89
+  },
+  "training_metrics_file": "results/planner_metrics.json"
+}
