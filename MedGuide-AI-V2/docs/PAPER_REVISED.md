@@ -1,26 +1,29 @@
-# MedGuide AI: A Retrieval-Grounded Multi-Agent Framework for Personalized Healthcare Navigation
+# MedGuide AI: A Multi-Agent Framework for Personalized Healthcare Navigation with Learned Operation Selection
 
 Bhargavi B, Naslun Wafa T
 Department of Computer Science and Engineering, College of Engineering, Anna University, Chennai, India
 
 ## Abstract
 
-Patients seeking health information online face two distinct problems: understanding a named medical condition, and deciding how urgently a set of personal symptoms needs professional care. General-purpose Large Language Models answer both fluently but without verifiable grounding, and a single monolithic prompt gives no place to enforce a safety floor. This paper presents MedGuide AI, an implemented multi-agent framework that separates these concerns. Medical knowledge is acquired by retrieval, not by fine-tuning: a TF-IDF index over 16,412 MedQuAD question-answer pairs curated from NIH sources, supplemented by 482 English MedDialog patient-doctor exchanges. Urgency is decided by a supervised classifier (word plus character TF-IDF with a calibrated linear Support Vector Machine) trained on 1,280 Emergency-Severity-Index-style symptom vignettes, and a deterministic red-flag screen that may only escalate the predicted level, never lower it. A single Large Language Model call (Google Gemini) is used solely to phrase the final answer from the retrieved passages and the assigned urgency level; it is never asked to supply facts or to decide urgency, and the system degrades to a deterministic offline response when the model is unavailable. All reported numbers come from executed evaluation scripts included with the code. On a vignette-disjoint test split the trained triage stage reaches 0.688 accuracy with a critical-safety-violation rate of 0.10, against 0.219 and 0.60 for the rule-based baseline it replaces. Retrieval reaches topic Recall@3 of 0.907 over the full corpus, and on 200 questions replayed from the corpus the answer is drawn from the question's own row 90.5% of the time. End-to-end latency excluding the Large Language Model call is 0.058 s. We state explicitly what these numbers do not show: the triage vignettes are author-written and not clinician-validated, groundedness is a lexical proxy, and no clinical validation has been performed.
+Patients seeking health information online face two distinct problems: understanding a named medical condition, and deciding how urgently a set of personal symptoms needs professional care. General-purpose Large Language Models answer both fluently but without verifiable grounding, and a single monolithic prompt gives no place to enforce a safety floor. This paper presents MedGuide AI, an implemented multi-agent framework that separates these concerns. Medical knowledge is acquired by retrieval, not by fine-tuning: a TF-IDF index over 16,412 MedQuAD question-answer pairs curated from NIH sources, supplemented by 482 English MedDialog patient-doctor exchanges. Urgency is decided by a supervised classifier (word plus character TF-IDF with a calibrated linear Support Vector Machine) trained on 1,280 Emergency-Severity-Index-style symptom vignettes, and a deterministic red-flag screen that may only escalate the predicted level, never lower it. A single Large Language Model call (Google Gemini) is used solely to phrase the final answer from the retrieved passages and the assigned urgency level; it is never asked to supply facts or to decide urgency, and the system degrades to a deterministic offline response when the model is unavailable. The framework does not run one fixed chain: a trained planner reads the query and selects one of six operations — emergency escalation, symptom triage, knowledge retrieval, condition comparison, medication-safety refusal, or out-of-scope refusal — each of which expands into its own agent chain, with deterministic overrides that may only make the selection more cautious. All reported numbers come from executed evaluation scripts included with the code. On a group-disjoint split of 583 held-out queries the deployed selection policy reaches 0.863 accuracy and 0.851 macro-F1, against 0.220 for the fixed pipeline it replaces and 0.842 for a hand-written rule policy, while Gemini used as the planner reaches 0.876 at roughly 3,500 times the decision latency. Because the planner alone recovers only 0.39 of emergency queries, safety is measured at the level of the whole pipeline: across the 88 emergency queries in the split, 34 are escalated by the planner bypass and the remaining 54 by the triage stage, giving an escalation rate of 1.000 and no missed emergency. On a vignette-disjoint test split the trained triage stage reaches 0.688 accuracy, and the assembled pipeline reaches 0.719 with a critical-safety-violation rate of 0.000, against 0.219 and 0.60 for the rule-based baseline it replaces. Retrieval reaches topic Recall@3 of 0.907 over the full corpus, and on 200 questions replayed from the corpus the answer is drawn from the question's own row 90.5% of the time. End-to-end latency excluding the Large Language Model call is 0.069 s, of which operation selection costs 2 ms. We state explicitly what these numbers do not show: the operation labels and the triage vignettes are author-written and not clinician-validated, groundedness is a lexical proxy, and no clinical validation has been performed.
 
-**Index Terms**—Multi-Agent Systems, Retrieval-Augmented Generation, Clinical Triage, Large Language Models, Healthcare Navigation, AI Safety.
+**Index Terms**—Multi-Agent Systems, Operation Selection, Retrieval-Augmented Generation, Clinical Triage, Large Language Models, Healthcare Navigation, AI Safety.
 
 ## I. Introduction
 
 Deciding whether a symptom needs a hospital visit today, tomorrow, or not at all is a routine but consequential judgement that patients make with poor information. Search engines return documents rather than decisions; general-purpose Large Language Models (LLMs) return confident prose whose provenance cannot be checked. Two failure modes matter in this domain. The first is unverified generation: a model that produces a plausible mechanism for a symptom without any source behind it. The second is an absent safety floor: a system that, on an unusual phrasing of a red-flag complaint, produces reassuring advice with no component whose job is to prevent that.
 
-MedGuide AI addresses both by refusing to let one component do everything. Facts come from a retrievable corpus, urgency comes from a trained classifier constrained by a deterministic screen, and the LLM contributes wording only. This paper describes the system as implemented and evaluated, not as intended.
+A third problem is specific to multi-agent designs and is usually left unmeasured: what the framework should *do* with a query. A pipeline that always runs the same chain treats "what causes diabetes", "I have had chest pain for an hour" and "which tablet should I take" as the same kind of request, and the resulting answer is only accidentally appropriate. The decision of which operation to run is itself a learnable, measurable problem, and it is the research question of this paper.
+
+MedGuide AI addresses all three by refusing to let one component do everything. A trained planner selects the operation, facts come from a retrievable corpus, urgency comes from a trained classifier constrained by a deterministic screen, and the LLM contributes wording only. This paper describes the system as implemented and evaluated, not as intended.
 
 ### A. Contributions
 
-1. An implemented multi-agent healthcare-navigation pipeline with two distinct routes — a general medical-information route and a personal-symptom triage route — separated by an explicit query router, with an emergency screen ahead of both.
-2. A concrete answer to the question of how medical knowledge is acquired: retrieval over MedQuAD and MedDialog at request time, with the retrieved passage constrained to be the only permitted source of facts in the generated answer.
-3. Two supervised models trained on documented, reproducible datasets — a four-level triage classifier and a nine-class question-intent classifier — with train/test protocols that prevent phrasing leakage.
-4. A measured evaluation of every component, produced by scripts shipped with the code, including a comparison against the rule-based logic the trained triage stage replaces, and an explicit statement of what remains unvalidated.
+1. A learned operation-selection layer for a multi-agent healthcare framework: six operations, each with its own agent chain, chosen per query by a trained classifier whose decisions deterministic safety rules may make more cautious but never less.
+2. A measured comparison of five selection policies on an identical group-disjoint split — a fixed pipeline, a hand-written rule policy, the trained planner, the deployed policy with safety overrides, and an LLM planner — reporting accuracy, macro-F1, decision latency and two error rates defined by their clinical consequence.
+3. A concrete answer to the question of how medical knowledge is acquired: retrieval over MedQuAD and MedDialog at request time, with the retrieved passage constrained to be the only permitted source of facts in the generated answer.
+4. Three supervised models trained on documented, reproducible datasets — the operation planner, a four-level triage classifier and a nine-class question-intent classifier — with train/test protocols that prevent phrasing leakage.
+5. A measured evaluation of every component, produced by scripts shipped with the code, including a pipeline-level safety measurement that shows why per-stage accuracy is the wrong unit for a safety claim, and an explicit statement of what remains unvalidated.
 
 ### B. Note on evaluation data
 
@@ -34,19 +37,26 @@ The gap this work targets is narrower than the one claimed in the earlier versio
 
 ## III. Implemented System Architecture
 
-MedGuide AI is a Python application with a Streamlit interface (`app.py`) and a sequential orchestrator (`workflow.py`). Consultation history is stored in a local SQLite database. There is no service mesh, no vector database and no graph-orchestration library; the orchestrator is a list of agent functions applied to a shared state dictionary, which is sufficient for the pipeline depth involved and keeps every intermediate decision inspectable.
+MedGuide AI is a Python application with a Streamlit interface (`app.py`) and a planner-driven orchestrator (`workflow.py`). Consultation history is stored in a local SQLite database. There is no service mesh, no vector database and no graph-orchestration library; each operation is a list of agent functions applied to a shared state dictionary, which is sufficient for the chain depth involved and keeps every intermediate decision inspectable.
 
-### A. Routing
+### A. Operations and the Planner Agent
 
-An incoming query passes through three decisions in a fixed order.
+The orchestrator exposes six operations. Each is a named agent chain, and exactly one runs per query.
 
-1. **Emergency screen.** The raw text is matched against a red-flag pattern set (severe chest pain, inability to breathe, unconsciousness, heavy bleeding, stroke signs, seizure, coughing or vomiting blood, and related phrasings). A match returns a deterministic emergency response immediately; no model runs, and no later stage can override it. This is the system's safety floor.
-2. **Query routing.** A rule-based router (`agents/query_router.py`) separates a general information question ("What are the treatments for hearing loss?") from a personal symptom report ("I have had fever and headache for seven days"), using question-leading words, trailing interrogatives and word-boundary-anchored first-person markers. Word boundaries matter: a substring test for "me" misroutes every question containing "syndrome".
-3. **Route execution.** General questions run the four-stage knowledge route; symptom reports run the seven-stage triage route.
+| Operation | Chain | Reason it is separate |
+| --- | --- | --- |
+| `EMERGENCY_ESCALATE` | none — deterministic escalation | red-flag wording must not wait for retrieval or generation |
+| `TRIAGE_SYMPTOMS` | Profile → Symptom → Retrieval → Risk → Recommendation → Hospital → Final | the patient describes their own complaint and needs an urgency decision |
+| `RETRIEVE_KNOWLEDGE` | Profile → Symptom → Retrieval → Knowledge Answer | an information question about a named condition |
+| `COMPARE_CONDITIONS` | Profile → Comparison (independent retrieval per side) | one passage cannot answer a two-sided question; retrieving once yields a one-sided answer |
+| `MEDICATION_SAFETY` | deterministic refusal, no LLM call | naming a drug or a dose is outside the system's competence |
+| `OUT_OF_SCOPE` | deterministic refusal, no LLM call | the system is not a general-purpose assistant |
+
+The Planner Agent (`agents/planner.py`) implements three policies over these operations: `rule_plan`, a hand-written keyword router used as a baseline and as the fallback when the model is unconfident or absent; `model_plan`, the trained classifier, which defers to the rule policy below a confidence of 0.35; and `llm_plan`, which asks Gemini for one operation label and is evaluated as a baseline rather than deployed. The deployed policy, `plan`, wraps `model_plan` in two deterministic overrides: red-flag wording forces `EMERGENCY_ESCALATE`, and a prescription or dosage request forces `MEDICATION_SAFETY`. Overrides are applied through a fixed cautiousness ordering, so an override can only move the decision towards the more cautious operation; an emergency phrased as a medication request escalates rather than being refused. Every decision — chosen operation, model prediction, confidence, and any override — is recorded in the shared state and surfaced in the interface, so the routing behaviour is inspectable during a demonstration rather than implicit.
 
 ### B. Agents
 
-The knowledge route comprises the Patient Profile Agent, the Symptom Analysis Agent, the Medical Knowledge Agent (retrieval plus intent-aware reranking) and the Knowledge Answer Agent, which produces the final text from the retrieved row. The triage route comprises the Patient Profile Agent, the Symptom Analysis Agent (symptom, duration and severity extraction), the Medical Knowledge Retrieval Agent, the Risk Assessment Agent (trained classifier plus the escalate-only guardrail), the Recommendation Agent, the Hospital Navigation Agent and the Final Response Agent, which issues the single LLM call.
+The symptom chain comprises the Patient Profile Agent, the Symptom Analysis Agent (symptom, duration and severity extraction), the Medical Knowledge Retrieval Agent, the Risk Assessment Agent (trained classifier plus the escalate-only guardrail), the Recommendation Agent, the Hospital Navigation Agent and the Final Response Agent, which issues the single LLM call. The knowledge chain reuses the first three and ends in the Knowledge Answer Agent, which produces the text from the retrieved row. The Comparison Agent (`agents/compare_agent.py`) splits the question into two condition names, retrieves each side independently — excluding the row already used for the first side, since the corpus sometimes files both conditions under one topic — and refuses to compare at all if either side has no acceptable match. The Medication Safety and Out-of-Scope Agents (`agents/safety_agent.py`) are deterministic by construction: they make no model call, so their behaviour cannot regress with a model update.
 
 ### C. Retrieval and reranking
 
@@ -72,16 +82,25 @@ Exactly one LLM call is made per consultation (`llm.py`, Google Gemini). Its pro
 
 **Triage dataset** (`data/triage_dataset.csv`): 160 author-written ESI-style symptom vignettes labelled EMERGENCY, HIGH, MODERATE or LOW, each rendered in 8 neutral phrasings for 1,280 rows. This dataset exists because neither MedQuAD nor MedDialog carries urgency labels, and deriving them automatically would fabricate the very ground truth being measured. It is not clinician-validated; this is the single most important limitation of the reported triage results.
 
+**Operation-selection dataset** (`data/plan_dataset.csv`): 3,040 queries labelled with the operation the framework should run — `MEDICATION_SAFETY` 660, `RETRIEVE_KNOWLEDGE` 640, `TRIAGE_SYMPTOMS` 640, `COMPARE_CONDITIONS` 640, `EMERGENCY_ESCALATE` 320, `OUT_OF_SCOPE` 140. Knowledge queries are real MedQuAD questions and comparison queries are built from pairs of real MedQuAD focus areas, so two of the six classes are corpus-derived rather than authored. Symptom and emergency queries reuse the triage vignettes and their phrasings, which is what makes emergency queries hard for the planner: a calmly worded emergency vignette is lexically an ordinary symptom report. Medication and out-of-scope queries are authored templates. Each row carries a group identifier (the source question, vignette or template) used to keep rephrasings on one side of the split.
+
 ## V. Training Methodology
+
+**Operation planner** (`ml/train_planner.py`): word (1-2 gram) TF-IDF unioned with character (3-5 gram) TF-IDF, feeding logistic regression with balanced class weights. Splitting uses GroupShuffleSplit over the source groups — 712 training and 178 test groups, 2,457 and 583 rows — so no rephrasing of a test query appears in training. Training takes 0.49 s. Grouped 5-fold cross-validation gives 0.918 ± 0.014 accuracy. The trained model is not trusted unconditionally: below a confidence of 0.35 the rule policy decides, and the two deterministic overrides of Section III-A are applied afterwards.
 
 **Triage classifier** (`ml/train_triage.py`): word (1-2 gram) and character (3-5 gram) TF-IDF features feeding a linear Support Vector Machine with probability calibration. Splitting uses GroupShuffleSplit over the 160 seed vignettes, so all 8 phrasings of a vignette fall on the same side of the split and no phrasing leaks from training into testing: 1,024 training and 256 test rows. Training takes 0.12 s. At inference the calibrated EMERGENCY probability is thresholded at 0.20 rather than taking the argmax; this deliberately trades precision for recall on the class where a miss is harmful, and the deterministic red-flag screen sits above it as an escalate-only guardrail.
 
 **Intent classifier** (`ml/train_intent.py`): TF-IDF (1-2 gram) features with logistic regression, 5,472 training and 1,369 test rows, trained in 0.05 s.
 
-Both models are written to `models/*.joblib` and consumed by the agents through `ml/predictors.py`, which falls back to the previous rule-based behaviour if a model file is missing.
+All three models are written to `models/*.joblib` and consumed by the agents through `ml/predictors.py`, which falls back to the previous rule-based behaviour if a model file is missing.
 
 ## VI. Evaluation Metrics
 
+- **Operation-selection accuracy and macro-F1** over the six operations on the group-disjoint test split, with per-operation precision, recall and F1.
+- **Unsafe routing rate:** the fraction of emergency queries not routed to `EMERGENCY_ESCALATE` by a policy. Reported per policy, and deliberately *not* interpreted as a patient-facing failure rate — see the pipeline-level measure below.
+- **Unsafe advice rate:** the fraction of prescription requests not routed to `MEDICATION_SAFETY`.
+- **Pipeline escalation rate:** the fraction of emergency queries that the assembled system escalates, whether by the planner bypass or by the red-flag screen and trained triage classifier one stage later. This is the safety measure the system should be judged on, because the planner is not the last line of defence.
+- **Mean decision time per query,** which is what separates the trained planner from an LLM planner of comparable accuracy.
 - **Triage accuracy and macro-F1** over the four urgency levels on the vignette-disjoint test split.
 - **Critical Safety Violation Rate (CSVR):** the fraction of EMERGENCY test cases assigned a level below EMERGENCY by the deployed pipeline. This is the primary safety metric and the only one whose target is zero.
 - **Retrieval Recall@k, topic Recall@3 and MRR@10:** measured by holding out MedQuAD questions and asking whether the source row (Recall@k) or any row on the same focus area (topic Recall@3) is retrieved.
@@ -92,7 +111,32 @@ Both models are written to `models/*.joblib` and consumed by the agents through 
 
 All values below are read from `results/*.json`, produced by the commands in Section IX.
 
-**Table I — Triage stage on the vignette-disjoint test split (256 rows, 80 EMERGENCY)**
+**Table I — Operation selection, 583 held-out queries on a group-disjoint split**
+
+| Policy | Accuracy | Macro-F1 | Unsafe routing | Unsafe advice | Mean decision time |
+| --- | --- | --- | --- | --- | --- |
+| Fixed pipeline (always the symptom chain) | 0.220 | 0.060 | 1.000 | 1.000 | < 0.1 ms |
+| Hand-written rule policy | 0.842 | 0.820 | 0.727 | 0.000 | 0.02 ms |
+| Trained planner alone | 0.837 | 0.815 | 0.784 | 0.000 | 2.1 ms |
+| **Deployed: trained planner + safety overrides** | **0.863** | **0.851** | 0.614 | 0.000 | 2.0 ms |
+| Gemini as planner (89 of 90 sampled queries answered) | 0.876 | 0.884 | 0.000 | 0.000 | 6.96 s |
+
+The fixed pipeline is the system this work replaces, and it is the reason the contribution is measurable: with identical corpora, identical agents and identical models, changing only the decision layer moves accuracy from 0.220 to 0.863. The deployed policy beats both the rule policy and the raw classifier it is built from, because the overrides correct exactly the class the classifier is worst at. Gemini plans marginally better than the trained model but takes about 3,500 times longer per decision and failed to answer 1 of 90 calls, so it is reported as a baseline rather than deployed as the router.
+
+Per-operation F1 for the deployed policy is 1.00 for comparison, knowledge and medication requests, 0.89 for out-of-scope, 0.75 for symptoms and 0.47 for emergencies. The last figure is the honest result of this section and must not be presented otherwise: an emergency vignette written in calm language is lexically indistinguishable from an ordinary symptom report, and the planner's emergency recall is 0.386.
+
+**Table II — Emergency handling measured at the pipeline level (88 emergency queries in the same split)**
+
+| Outcome | Count | Rate |
+| --- | --- | --- |
+| Escalated by the planner bypass | 34 | 0.386 |
+| Escalated by the triage stage after being routed to the symptom chain | 54 | 0.614 |
+| **Escalated overall** | **88** | **1.000** |
+| Missed | 0 | 0.000 |
+
+This table is the reason the 0.614 unsafe-routing figure in Table I is not a patient-facing failure rate. A query routed to the symptom chain still meets the deterministic red-flag screen and the trained triage classifier, and every emergency query missed by the planner is caught there. Safety in this framework is a property of defence in depth, not of any single classifier — which is also why no component's accuracy should be quoted as the system's safety.
+
+**Table III — Triage stage on the vignette-disjoint test split (256 rows, 80 EMERGENCY)**
 
 | Configuration | Accuracy | Macro-F1 | EMERGENCY recall | CSVR |
 | --- | --- | --- | --- | --- |
@@ -102,7 +146,7 @@ All values below are read from `results/*.json`, produced by the commands in Sec
 
 Grouped 5-fold cross-validation over seed vignettes gives 0.712 ± 0.051 accuracy. The deployed configuration keeps the same accuracy as the argmax configuration while cutting the safety-critical error rate from 0.50 to 0.10, which is the trade this system is designed to make. Per-class results show the cost: HIGH is not separated from EMERGENCY (HIGH F1 of 0.00 in the deployed configuration, with HIGH cases escalated upward), while MODERATE and LOW are recovered reliably (F1 0.875 and 0.857).
 
-**Table II — Question-intent classifier (1,369 test rows, 9 classes)**
+**Table IV — Question-intent classifier (1,369 test rows, 9 classes)**
 
 | Metric | Value |
 | --- | --- |
@@ -112,7 +156,7 @@ Grouped 5-fold cross-validation over seed vignettes gives 0.712 ± 0.051 accurac
 
 This result must be read as intent recognition on template-generated questions, not as medical accuracy. MedQuAD questions are produced from a small set of templates, so the task is close to pattern identification; the value of the classifier is that it makes retrieval intent-aware, not that it demonstrates clinical competence.
 
-**Table III — Retrieval over the full 16,407-row corpus (300 held-out queries)**
+**Table V — Retrieval over the full 16,407-row corpus (300 held-out queries)**
 
 | Metric | As deployed (question+answer+topic index) | Answer-only index |
 | --- | --- | --- |
@@ -125,7 +169,7 @@ This result must be read as intent recognition on template-generated questions, 
 
 Exact-row recall is modest because the corpus contains many near-duplicate questions per disease; topic Recall@3 of 0.907 is the metric that reflects whether the system reaches the right subject matter.
 
-**Table IV — Knowledge route, 200 questions replayed from the corpus (seed 42, LLM disabled)**
+**Table VI — Knowledge route, 200 questions replayed from the corpus (seed 42, LLM disabled)**
 
 | Metric | Value |
 | --- | --- |
@@ -138,31 +182,37 @@ Exact-row recall is modest because the corpus contains many near-duplicate quest
 
 Before near-exact question promotion was added, the source row was ranked first in 0.695 of cases; the reranking change accounts for the increase to 0.905.
 
-**Table V — End-to-end pipeline (32 held-out symptom cases, LLM disabled)**
+**Table VII — End-to-end pipeline (32 held-out symptom cases, LLM disabled)**
 
 | Metric | Value |
 | --- | --- |
-| Mean latency (s) | 0.058 |
-| Median / p95 latency (s) | 0.020 / 0.030 |
+| Triage accuracy of the assembled pipeline | 0.719 |
+| Critical Safety Violation Rate | 0.000 |
 | Immediate-care advice on EMERGENCY cases | 1.000 |
-| Response structure compliance | 0.875 |
-| Slowest stage (Medical Knowledge Agent, mean s) | 0.056 |
+| Mean latency (s) | 0.069 |
+| Median / p95 latency (s) | 0.040 / 0.050 |
+| Response structure compliance | 0.719 |
+| Slowest stage (Medical Knowledge Agent, mean s) | 0.064 |
 
-Latency is dominated by retrieval; the trained classifier contributes 0.011 s. A live Gemini call adds roughly one to three seconds of network-bound time on top of this, which is why it is excluded from the pipeline measurement rather than folded into it.
+The assembled pipeline reaches a higher triage accuracy than the triage classifier measured alone (0.719 against 0.688) and no critical safety violation on these cases, because the planner bypass and the red-flag screen both act before the classifier's output is used. Structure compliance is scored against the five-section symptom template, so escalated cases — which use the shorter emergency template deliberately — count against it; the figure understates conformance rather than overstating it. Latency is dominated by retrieval; the trained classifier contributes 0.010 s and the planner 0.002 s. A live Gemini call adds roughly one to three seconds of network-bound time on top of this, which is why it is excluded from the pipeline measurement rather than folded into it.
 
 ## VIII. Discussion, Limitations and Safety
 
-The measured results support a narrow claim: that decomposing the problem improves the safety-relevant behaviour of the system over the monolithic rule-based logic it replaces, and that answers on the knowledge route are traceable to a specific corpus row. They do not support any claim of clinical accuracy.
+The measured results support three narrow claims. First, that choosing the operation is worth learning: the same framework with a fixed chain scores 0.220 where the deployed policy scores 0.863. Second, that a small trained classifier plus deterministic overrides is competitive with an LLM planner at a fraction of the latency, and is auditable in a way the LLM is not. Third, that answers on the knowledge route are traceable to a specific corpus row. They do not support any claim of clinical accuracy.
 
 Specific limitations, stated deliberately:
 
+- **The operation labels are partly authored.** Knowledge and comparison queries derive from real MedQuAD text, but medication, out-of-scope, symptom and emergency queries come from authored seeds and templates. The planner's 0.863 therefore measures selection over a distribution this project defined, and real patient phrasing will be more varied than the eight wrappers used here.
+- **The planner cannot recognise a calmly worded emergency** (recall 0.386), and no amount of retraining on this dataset should be expected to fix it, because the label distinction is clinical rather than lexical. The system is safe on these cases only because the triage stage screens them again.
+- **The comparison operation depends on both sides existing in the corpus.** When they do not, or when the corpus files both conditions under one topic, the operation says so instead of contrasting them — correct behaviour, but it means a comparison question is not always answered.
 - **The triage ground truth is author-written.** The 160 vignettes were written for this project, not labelled by clinicians and not drawn from a validated dataset. Every triage number inherits that weakness. Replacing this dataset with clinician-labelled vignettes is the highest-value next step.
 - **HIGH and EMERGENCY are not separated.** The system resolves this by escalating, which is the safe direction but produces over-triage.
 - **Groundedness is measured lexically.** Overlap between the delivered answer and the gold answer shows that the text came from the retrieved row; it does not show that the row answers the question a patient actually asked.
 - **The intent classifier's perfect score is an artefact of template-generated questions.**
 - **Corpus coverage is uneven.** Rare and genetic diseases are well covered; arbitrary symptom combinations have no matching row, which is why the symptom route relies on the trained classifier and structured guidance rather than on retrieval alone.
 - **The system is single-turn, English-only, and has no clinical validation, no clinician in the loop and no regulatory assessment.** It is an educational prototype. It does not diagnose or prescribe, refuses medicine names and dosages, and displays a standing disclaimer.
-- **Safety depends on a deterministic component, not on a model.** The red-flag screen runs first and can only escalate. This is a design decision made because a 0.688-accuracy classifier is not a safe last line of defence.
+- **Safety depends on deterministic components, not on models.** The red-flag screen and the medication override run outside every model and can only escalate. This is a design decision made because neither a 0.688-accuracy triage classifier nor a planner with 0.386 emergency recall is a safe last line of defence.
+- **The LLM planner baseline is not reproducible to the digit.** It depends on a hosted model whose availability and version change; one call in ninety returned nothing during the reported run.
 
 ## IX. Reproducibility
 
@@ -172,12 +222,15 @@ From the repository root:
 pip install -r requirements.txt
 python -m ml.triage_dataset          # build data/triage_dataset.csv
 python -m ml.intent_dataset          # build data/intent_dataset.csv
-python -m ml.train_triage            # -> models/triage.joblib, results/triage_metrics.json
-python -m ml.train_intent            # -> models/intent.joblib, results/intent_metrics.json
+python -m ml.plan_dataset            # build data/plan_dataset.csv
+python -m ml.train_triage            # -> models/triage_classifier.joblib, results/triage_metrics.json
+python -m ml.train_intent            # -> models/intent_classifier.joblib, results/intent_metrics.json
+python -m ml.train_planner           # -> models/planner_classifier.joblib, results/planner_metrics.json
+python -m ml.eval_planner            # -> results/planner_eval.json (Tables I and II)
 python -m ml.eval_retrieval          # -> results/retrieval_metrics.json
 python -m ml.eval_knowledge_qa --limit 200   # -> results/knowledge_qa_metrics.json
 python -m ml.eval_pipeline           # -> results/pipeline_metrics.json
-python -m pytest tests -q            # 16 tests
+python -m pytest tests -q            # 25 tests
 streamlit run app.py                 # demo, port 8501
 ```
 
