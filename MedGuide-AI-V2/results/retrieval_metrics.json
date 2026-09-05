@@ -1,0 +1,27 @@
+{
+  "corpus": "MedQuAD (data/medquad.csv)",
+  "documents": 16407,
+  "queries": 300,
+  "retriever": "TF-IDF (English stop words, 20k features) + cosine similarity",
+  "random_state": 42,
+  "protocols": {
+    "as_deployed": {
+      "recall_at_1": 0.2933,
+      "recall_at_3": 0.52,
+      "recall_at_5": 0.68,
+      "topic_recall_at_3": 0.9067,
+      "mrr_at_10": 0.4531,
+      "retrieval_latency_ms_mean": 10.23,
+      "retrieval_latency_ms_p95": 10.45
+    },
+    "answer_only": {
+      "recall_at_1": 0.24,
+      "recall_at_3": 0.4667,
+      "recall_at_5": 0.6567,
+      "topic_recall_at_3": 0.8767,
+      "mrr_at_10": 0.3981,
+      "retrieval_latency_ms_mean": 10.31,
+      "retrieval_latency_ms_p95": 11.25
+    }
+  }
+}

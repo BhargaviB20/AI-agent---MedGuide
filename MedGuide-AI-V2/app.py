@@ -1,4 +1,6 @@
+import json
 from datetime import datetime
+from pathlib import Path
 
 import streamlit as st
 
@@ -117,6 +119,7 @@ font-size: 12px; font-weight: 800;
 .badge-moderate { background: #493817; color: #ffd166; }
 .badge-high { background: #492717; color: #ffae72; }
 .badge-emergency { background: #4a1b24; color: #ff6b7a; }
+.badge-info { background: #16334a; color: #7cc4ff; }
 </style>
 """,
     unsafe_allow_html=True,
@@ -132,6 +135,8 @@ def get_risk_badge(risk_text):
 
     if "EMERGENCY" in text:
         return "EMERGENCY", "badge-emergency"
+    if "INFO" in text:
+        return "INFO", "badge-info"
     if "HIGH" in text:
         return "HIGH", "badge-high"
     if "MODERATE" in text:
@@ -249,23 +254,6 @@ professional. For emergency symptoms, seek immediate professional care.
 
 if page == "💬 Chat":
 
-    SAMPLE_CASES = {
-        "Mild cold": "Mild runny nose and slight sore throat since yesterday.",
-        "Persistent fever": "Fever around 101F for the past 4 days.",
-        "Breathing difficulty": "Severe difficulty breathing and tightness in chest.",
-        "Multiple symptoms": "I have cold, fever and headache for 7 days.",
-    }
-
-    if "symptom_text" not in st.session_state:
-        st.session_state.symptom_text = ""
-
-    st.markdown("### Quick test cases")
-
-    cols = st.columns(4)
-    for col, (label, text) in zip(cols, SAMPLE_CASES.items()):
-        if col.button(label, use_container_width=True):
-            st.session_state.symptom_text = text
-
     with st.form("patient_form", clear_on_submit=False):
         left, right = st.columns(2)
 
@@ -281,7 +269,6 @@ if page == "💬 Chat":
             symptoms = st.text_area(
                 "Medical question / symptoms",
                 height=170,
-                key="symptom_text",
                 placeholder="Example: I have cold, fever and headache for 7 days. What should I do?",
             )
 
@@ -347,10 +334,21 @@ if page == "💬 Chat":
                 )
                 st.markdown(result.get("final_response", "Unable to generate a response."))
 
-            with st.expander("Suggested care pathway"):
-                st.write(result.get("recommendation", ""))
-                st.write(result.get("hospital_navigation", ""))
-                st.caption(f"Response time: {result.get('response_time_seconds', '-')} seconds")
+                if result.get("query_type") in ("symptom_report", "emergency"):
+                    st.markdown("**Suggested care pathway**")
+                    st.write(result.get("recommendation", ""))
+                    st.write(result.get("hospital_navigation", ""))
+
+            decision = result.get("planner_decision") or {}
+            if decision:
+                overrides = decision.get("overrides") or []
+                st.caption(
+                    "Operation chosen: {} (confidence {:.2f}){}".format(
+                        decision.get("operation", "-"),
+                        decision.get("confidence", 0.0),
+                        "; safety override: " + ", ".join(overrides) if overrides else "",
+                    )
+                )
 
             st.caption(
                 "AI-assisted health guidance. This does not replace professional medical advice."
@@ -408,7 +406,48 @@ elif page == "📜 History":
 
 elif page == "📊 Evaluation":
     st.markdown("## 📊 Evaluation")
-    st.caption("Evaluate the risk-classification component using predefined test cases.")
+
+    st.markdown("### Measured results")
+    st.caption(
+        "Produced by the scripts in `ml/`: train_planner.py, train_triage.py, "
+        "train_intent.py, eval_planner.py, eval_retrieval.py, "
+        "eval_pipeline.py and eval_knowledge_qa.py. "
+        "Re-run them to refresh these numbers."
+    )
+
+    RESULTS_DIR = Path(__file__).resolve().parent / "results"
+    RESULT_FILES = {
+        "Operation selection: policies compared": "planner_eval.json",
+        "Operation-selection classifier": "planner_metrics.json",
+        "Triage classifier vs rules": "triage_metrics.json",
+        "Question-intent classifier": "intent_metrics.json",
+        "MedQuAD retrieval": "retrieval_metrics.json",
+        "End-to-end pipeline": "pipeline_metrics.json",
+        "MedQuAD question answering": "knowledge_qa_metrics.json",
+    }
+
+    found_any = False
+    for title, filename in RESULT_FILES.items():
+        path = RESULTS_DIR / filename
+        if not path.exists():
+            continue
+        found_any = True
+        with st.expander(f"{title}  ({filename})"):
+            data = json.loads(path.read_text(encoding="utf-8"))
+            data.pop("cases_detail", None)
+            data.pop("test_index", None)
+            st.json(data, expanded=False)
+
+    if not found_any:
+        st.info(
+            "No measured results yet. Run `python -m ml.train_planner`, "
+            "`python -m ml.train_triage`, `python -m ml.train_intent`, "
+            "`python -m ml.eval_planner`, `python -m ml.eval_retrieval` and "
+            "`python -m ml.eval_pipeline` first."
+        )
+
+    st.markdown("### Live smoke test")
+    st.caption("Runs the full pipeline on a few predefined cases.")
 
     TEST_CASES = [
         {
@@ -520,8 +559,11 @@ symptoms may be, why they may have happened, what can be done at home, and when
 a doctor should be consulted.
 
 The retrieved medical data is used internally to support the answer and is not
-displayed to the user. Risk screening is rule based so it is fast and
-reproducible, and only the final explanation uses the language model.
+displayed to the user. Triage combines a trained classifier with a deterministic
+red-flag keyword screen that can escalate a case to EMERGENCY but never lower it,
+and only the final explanation uses the language model.
+
+Measured results for every component are on the Evaluation page.
 
 This system is for academic demonstration only and is not a replacement for
 professional medical diagnosis or treatment.

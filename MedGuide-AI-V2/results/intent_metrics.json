@@ -1,0 +1,208 @@
+{
+  "model": "TF-IDF (1-2 gram) + Logistic Regression",
+  "dataset": "MedQuAD question templates (16,412 Q&A pairs)",
+  "classes": [
+    "causes",
+    "definition",
+    "diagnosis",
+    "frequency",
+    "genetics",
+    "prevention",
+    "prognosis",
+    "symptoms",
+    "treatment"
+  ],
+  "train_size": 5472,
+  "test_size": 1369,
+  "train_seconds": 0.05,
+  "accuracy": 1.0,
+  "precision_macro": 1.0,
+  "recall_macro": 1.0,
+  "f1_macro": 1.0,
+  "f1_weighted": 1.0,
+  "per_class": {
+    "causes": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 146.0
+    },
+    "definition": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "diagnosis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 130.0
+    },
+    "frequency": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "genetics": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "prevention": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 41.0
+    },
+    "prognosis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 152.0
+    },
+    "symptoms": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "treatment": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1369.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1369.0
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "causes",
+      "definition",
+      "diagnosis",
+      "frequency",
+      "genetics",
+      "prevention",
+      "prognosis",
+      "symptoms",
+      "treatment"
+    ],
+    "matrix": [
+      [
+        146,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        180,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        130,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        180,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        180,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        41,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        152,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        180,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        180
+      ]
+    ]
+  },
+  "cv5_accuracy_mean": 0.9993,
+  "cv5_accuracy_std": 0.0007
+}

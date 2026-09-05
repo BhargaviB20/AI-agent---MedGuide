@@ -1,0 +1,11 @@
+{
+  "sample_size": 200,
+  "random_state": 42,
+  "llm": false,
+  "routed_as_knowledge_question": 0.99,
+  "exact_source_question_at_1": 0.905,
+  "exact_source_question_at_3": 0.92,
+  "topic_at_1": 0.955,
+  "answer_grounded_in_source_row": 0.97,
+  "mean_latency_seconds": 0.0214
+}

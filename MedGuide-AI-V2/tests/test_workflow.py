@@ -20,4 +20,4 @@ def test_emergency_fast_path():
     }
     result = run_medguide(patient)
     assert "EMERGENCY" in result["risk"].upper()
-    assert "Emergency Fast-Path" in result["agent_log"][0]
+    assert any("Emergency Fast-Path" in line for line in result["agent_log"])
